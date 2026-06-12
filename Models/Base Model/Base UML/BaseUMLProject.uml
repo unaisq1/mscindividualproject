@@ -3,4 +3,7 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_cptngGWxEfGmR83NCWlxrA">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mblKMGWxEfGmR83NCWlxrA" name="Sensor"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_GTakMGYPEfGmR83NCWlxrA" name="Camera"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_h3sCcGYYEfGmR83NCWlxrA" name="LiDAR"/>
 </uml:Model>
