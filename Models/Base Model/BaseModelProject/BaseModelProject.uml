@@ -8,13 +8,121 @@
       <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_vbFI4GgvEfGmR83NCWlxrA" name="System Layer">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_GeAKwGrJEfGXLJvyXHhXzw"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_jc1lUGqMEfGXLJvyXHhXzw" name="Safe Vehicle Operation" visibility="public"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_LGtVsGqREfGXLJvyXHhXzw" name="Resist Malicious Control"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_4nvmYGqYEfGXLJvyXHhXzw" name="Requirement3"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4nvmYGqYEfGXLJvyXHhXzw" name="Sensor Failure Integrity"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_awjh8GqdEfGXLJvyXHhXzw" name="Data Integrity"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_jIQskGrFEfGXLJvyXHhXzw" name="Derived from" client="_LGtVsGqREfGXLJvyXHhXzw" supplier="_jc1lUGqMEfGXLJvyXHhXzw"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_lRaxcGrFEfGXLJvyXHhXzw" name="Derived from" client="_awjh8GqdEfGXLJvyXHhXzw" supplier="_4nvmYGqYEfGXLJvyXHhXzw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_W7WOUGrGEfGXLJvyXHhXzw" name="Emergency Braking System">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_C8ThcGrQEfG-5dxW-sG0PQ" name="EBS Constraint 1 (Safety Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_C8UvkGrQEfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.brakeResponseTime &lt;= 100&#xD;
+</body>
+          </specification>
+        </ownedRule>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_zxq4YGrREfG-5dxW-sG0PQ" name="EBS Constraint 2 (Safety Property) ">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_zxsGgGrREfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.obstacleDetectionRange >= 50</body>
+          </specification>
+        </ownedRule>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_NX72AGrUEfG-5dxW-sG0PQ" name="EBS Constraint 3 (Safety Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_NX-SQGrUEfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.systemAvailability = 0.99</body>
+          </specification>
+        </ownedRule>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_CUEn4GtAEfG-5dxW-sG0PQ" name="EBS Constraint 4 (Security Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_CUHrMGtAEfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.attackResistanceLevel = HIGH</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4ip8IGrGEfGXLJvyXHhXzw" name="brakeResponseTime" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_x6I6kGrHEfGXLJvyXHhXzw" name="LiteralInteger1" value="100"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5AD0YGrHEfGXLJvyXHhXzw" name="obstacleDetectionRange">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_As3vEGrIEfGXLJvyXHhXzw" name="LiteralInteger1" value="100"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gnAwcGrIEfGXLJvyXHhXzw" name="systemAvailability">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <defaultValue xmi:type="uml:LiteralReal" xmi:id="_lqEaoGrIEfGXLJvyXHhXzw" name="LiteralReal1" value="0.99"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xVvXkGrIEfGXLJvyXHhXzw" name="attackResistanceLevel">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_2I6ysGrIEfGXLJvyXHhXzw" name="LiteralString1" value="HIGH"/>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_3JeX8GgvEfGmR83NCWlxrA" name="Functional Layer">
       <packagedElement xmi:type="uml:Activity" xmi:id="_aNUiwGqBEfGmR83NCWlxrA" name="Activity1"/>
       <packagedElement xmi:type="uml:Interaction" xmi:id="_yVSEcGqFEfGmR83NCWlxrA" name="Interaction2"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_1KLnMGtEEfG-5dxW-sG0PQ" name="Obstacle Detection Function">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_u_-mYGtSEfG-5dxW-sG0PQ" name="ODF Constraint 1 (Safety Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_vAAbkGtSEfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.processingDeadline &lt;= 50&#xD;
+and self.detectionAccuracy >= 0.99</body>
+          </specification>
+        </ownedRule>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="__yzskGthEfG-5dxW-sG0PQ" name="ODF Constraint 2 (Security Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="__yzskWthEfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.dataSources >= 2</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_uqETsGtFEfG-5dxW-sG0PQ" name="detectionAccuracy">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <defaultValue xmi:type="uml:LiteralReal" xmi:id="_-ueLcGtFEfG-5dxW-sG0PQ" name="LiteralReal1" value="0.99"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_7usyMGtGEfG-5dxW-sG0PQ" name="processingDeadline">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_DLlagGtHEfG-5dxW-sG0PQ" name="LiteralInteger1" value="50"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bbYJ4GtIEfG-5dxW-sG0PQ" name="dataSources">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_RDO04GtJEfG-5dxW-sG0PQ" name="LiteralInteger1" value="2"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Ua-nQG3PEfG-5dxW-sG0PQ" name="Sensor Fusion Function">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_Ua-nQW3PEfG-5dxW-sG0PQ" name="ODF Constraint 1 (Safety Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ua-nQm3PEfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.processingDeadline &lt;= 50&#xD;
+and self.detectionAccuracy >= 0.99</body>
+          </specification>
+        </ownedRule>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_Ua-nQ23PEfG-5dxW-sG0PQ" name="ODF Constraint 2 (Security Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ua-nRG3PEfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.dataSources >= 2</body>
+          </specification>
+        </ownedRule>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_qo-okG3REfG-5dxW-sG0PQ" name="SFF Constraint 1 (Security to Safety Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_qo_PoG3REfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.inputValidationRequired = true&#xD;
+implies self.fusionLatency &lt;= 20</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ua-nRW3PEfG-5dxW-sG0PQ" name="inputValidationRequired">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_mKU94G3PEfG-5dxW-sG0PQ" name="LiteralBoolean1" value="true"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ua-nR23PEfG-5dxW-sG0PQ" name="votingThreshold">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Ua-nSG3PEfG-5dxW-sG0PQ" name="LiteralInteger1" value="2"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ua-nSW3PEfG-5dxW-sG0PQ" name="fusionLatency">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Ua-nSm3PEfG-5dxW-sG0PQ" name="LiteralInteger1" value="20"/>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FFFP0GgzEfGmR83NCWlxrA" name="Component Layer">
       <ownedComment xmi:type="uml:Comment" xmi:id="_z3MlkGn1EfGmR83NCWlxrA">
@@ -96,5 +204,11 @@
   <Blocks:Block xmi:id="_TZYUUGqCEfGmR83NCWlxrA" base_Class="_TZVRAGqCEfGmR83NCWlxrA"/>
   <Requirements:Requirement xmi:id="_jdP1AGqMEfGXLJvyXHhXzw" base_NamedElement="_jc1lUGqMEfGXLJvyXHhXzw" id="SafeReq1" text="The Autonomous Vehicle must ensure safe driving and emergency braking from initial takeoff to a stop" base_Class="_jc1lUGqMEfGXLJvyXHhXzw"/>
   <Requirements:Requirement xmi:id="_LGyOMGqREfGXLJvyXHhXzw" base_NamedElement="_LGtVsGqREfGXLJvyXHhXzw" id="SecReq1" text="The Autonomous Vehicle's Security System must be able to withstand malicious attacks from unauthorised sources" base_Class="_LGtVsGqREfGXLJvyXHhXzw"/>
-  <Requirements:Requirement xmi:id="_4nzQwGqYEfGXLJvyXHhXzw" base_NamedElement="_4nvmYGqYEfGXLJvyXHhXzw" base_Class="_4nvmYGqYEfGXLJvyXHhXzw"/>
+  <Requirements:Requirement xmi:id="_4nzQwGqYEfGXLJvyXHhXzw" base_NamedElement="_4nvmYGqYEfGXLJvyXHhXzw" id="SafeReq2" text="The Authonomous Vehicle must maintain safe operation if a single sensor fails" base_Class="_4nvmYGqYEfGXLJvyXHhXzw"/>
+  <Requirements:Requirement xmi:id="_awnMUGqdEfGXLJvyXHhXzw" base_NamedElement="_awjh8GqdEfGXLJvyXHhXzw" id="SecReq2" text="The Autonomous Vehicle's Securtity System must ensure that only authenticated data  is processed and infleunces driving decisions" base_Class="_awjh8GqdEfGXLJvyXHhXzw"/>
+  <Requirements:DeriveReqt xmi:id="_jIShwGrFEfGXLJvyXHhXzw" base_DirectedRelationship="_jIQskGrFEfGXLJvyXHhXzw" base_Abstraction="_jIQskGrFEfGXLJvyXHhXzw"/>
+  <Requirements:DeriveReqt xmi:id="_lRd0wGrFEfGXLJvyXHhXzw" base_DirectedRelationship="_lRaxcGrFEfGXLJvyXHhXzw" base_Abstraction="_lRaxcGrFEfGXLJvyXHhXzw"/>
+  <Blocks:Block xmi:id="_W7ZRoGrGEfGXLJvyXHhXzw" base_Class="_W7WOUGrGEfGXLJvyXHhXzw"/>
+  <Blocks:Block xmi:id="_1KV_QGtEEfG-5dxW-sG0PQ" base_Class="_1KLnMGtEEfG-5dxW-sG0PQ"/>
+  <Blocks:Block xmi:id="_UbEt4G3PEfG-5dxW-sG0PQ" base_Class="_Ua-nQG3PEfG-5dxW-sG0PQ"/>
 </xmi:XMI>
