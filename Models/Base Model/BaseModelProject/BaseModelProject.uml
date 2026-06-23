@@ -60,7 +60,6 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_3JeX8GgvEfGmR83NCWlxrA" name="Functional Layer">
-      <packagedElement xmi:type="uml:Activity" xmi:id="_aNUiwGqBEfGmR83NCWlxrA" name="Activity1"/>
       <packagedElement xmi:type="uml:Interaction" xmi:id="_yVSEcGqFEfGmR83NCWlxrA" name="Interaction2"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_1KLnMGtEEfG-5dxW-sG0PQ" name="Obstacle Detection Function">
         <ownedRule xmi:type="uml:Constraint" xmi:id="_u_-mYGtSEfG-5dxW-sG0PQ" name="ODF Constraint 1 (Safety Property)">
@@ -87,6 +86,10 @@ and self.detectionAccuracy >= 0.99</body>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_bbYJ4GtIEfG-5dxW-sG0PQ" name="dataSources">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_RDO04GtJEfG-5dxW-sG0PQ" name="LiteralInteger1" value="2"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__JSUYm5UEfG-5dxW-sG0PQ" name="sensor fusion function" type="_Ua-nQG3PEfG-5dxW-sG0PQ" aggregation="composite" association="__JQfMG5UEfG-5dxW-sG0PQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cOzG0G6pEfG-5dxW-sG0PQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cOzG0W6pEfG-5dxW-sG0PQ" name="LiteralUnlimitedNatural1" value="1"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Ua-nQG3PEfG-5dxW-sG0PQ" name="Sensor Fusion Function">
@@ -123,6 +126,67 @@ implies self.fusionLatency &lt;= 20</body>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Ua-nSm3PEfG-5dxW-sG0PQ" name="LiteralInteger1" value="20"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AqtvEG5OEfG-5dxW-sG0PQ" name="Braking Choice Function">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_NUY6cG5QEfG-5dxW-sG0PQ" name="BCF Constraint 1">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_NUaIkG5QEfG-5dxW-sG0PQ" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.choiceLatency &lt;= 10</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_G1EjEG5PEfG-5dxW-sG0PQ" name="choiceLatency">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_MBSJQG5PEfG-5dxW-sG0PQ" name="LiteralInteger1" value="10"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_B7lPIG5QEfG-5dxW-sG0PQ" name="choiceIntegrityCheck">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_G-AnMG5QEfG-5dxW-sG0PQ" name="LiteralBoolean1" value="true"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_1dhroG5SEfG-5dxW-sG0PQ" name="Actuation Function">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_La3ssG5TEfG-5dxW-sG0PQ" name="actuationLatency">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_PeHfsG5TEfG-5dxW-sG0PQ" name="LiteralInteger1" value="30"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_RME2UG5TEfG-5dxW-sG0PQ" name="overrideProtection">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_UuwS4G5TEfG-5dxW-sG0PQ" name="LiteralBoolean1" value="true"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="__JQfMG5UEfG-5dxW-sG0PQ" memberEnd="__JSUYm5UEfG-5dxW-sG0PQ __JTigm5UEfG-5dxW-sG0PQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__JSUYG5UEfG-5dxW-sG0PQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__JSUYW5UEfG-5dxW-sG0PQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="__JTigm5UEfG-5dxW-sG0PQ" name="obstacle detection function" type="_1KLnMGtEEfG-5dxW-sG0PQ" association="__JQfMG5UEfG-5dxW-sG0PQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Activity" xmi:id="_qOosgG6uEfGHXeUJchcvDQ" name="Activity7" node="_OIG_UG6xEfGHXeUJchcvDQ _oeGJsG6zEfGHXeUJchcvDQ _hRtmEG60EfGHXeUJchcvDQ _n7tuAG62EfGum7WEhupHQg _9B-WEG62EfGum7WEhupHQg _7m97MG63EfGum7WEhupHQg _A5lEUG64EfGum7WEhupHQg _qiM9MG64EfGum7WEhupHQg _1_0QAG64EfGum7WEhupHQg _6ykNUG64EfGum7WEhupHQg _AkOC4G65EfGum7WEhupHQg _4i60AG66EfGum7WEhupHQg _WclycG67EfGum7WEhupHQg">
+        <edge xmi:type="uml:ControlFlow" xmi:id="_7YkaMG60EfGHXeUJchcvDQ" target="_oeGJsG6zEfGHXeUJchcvDQ" source="_OIG_UG6xEfGHXeUJchcvDQ"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_2KcdkG62EfGum7WEhupHQg" target="_hRtmEG60EfGHXeUJchcvDQ" source="_oeGJsG6zEfGHXeUJchcvDQ"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_4n4wYG62EfGum7WEhupHQg" target="_n7tuAG62EfGum7WEhupHQg" source="_hRtmEG60EfGHXeUJchcvDQ"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_zNMM0G63EfGum7WEhupHQg" name="Yes" target="_9B-WEG62EfGum7WEhupHQg" source="_n7tuAG62EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_-J0ScG63EfGum7WEhupHQg" target="_7m97MG63EfGum7WEhupHQg" source="_9B-WEG62EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_mInGwG64EfGum7WEhupHQg" target="_A5lEUG64EfGum7WEhupHQg" source="_7m97MG63EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_CouRQG65EfGum7WEhupHQg" target="_AkOC4G65EfGum7WEhupHQg" source="_1_0QAG64EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_DgxTkG65EfGum7WEhupHQg" target="_AkOC4G65EfGum7WEhupHQg" source="_6ykNUG64EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_IStYkG65EfGum7WEhupHQg" name="Yes" target="_1_0QAG64EfGum7WEhupHQg" source="_qiM9MG64EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_JTrGUG65EfGum7WEhupHQg" name="No" target="_6ykNUG64EfGum7WEhupHQg" source="_qiM9MG64EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_1W5j8G66EfGum7WEhupHQg" target="_qiM9MG64EfGum7WEhupHQg" source="_A5lEUG64EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_UqDd0G67EfGum7WEhupHQg" name="No" target="_4i60AG66EfGum7WEhupHQg" source="_n7tuAG62EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_bf7JcG67EfGum7WEhupHQg" target="_WclycG67EfGum7WEhupHQg" source="_4i60AG66EfGum7WEhupHQg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_dO83EG67EfGum7WEhupHQg" target="_oeGJsG6zEfGHXeUJchcvDQ" source="_WclycG67EfGum7WEhupHQg"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_OIG_UG6xEfGHXeUJchcvDQ" name="Start Node" outgoing="_7YkaMG60EfGHXeUJchcvDQ"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_oeGJsG6zEfGHXeUJchcvDQ" name="Receive Sensor Data" incoming="_7YkaMG60EfGHXeUJchcvDQ _dO83EG67EfGum7WEhupHQg" outgoing="_2KcdkG62EfGum7WEhupHQg"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_hRtmEG60EfGHXeUJchcvDQ" name="Authenticate Sensor Data" incoming="_2KcdkG62EfGum7WEhupHQg" outgoing="_4n4wYG62EfGum7WEhupHQg"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_n7tuAG62EfGum7WEhupHQg" name="Is Data Authenticated?" incoming="_4n4wYG62EfGum7WEhupHQg" outgoing="_zNMM0G63EfGum7WEhupHQg _UqDd0G67EfGum7WEhupHQg"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_9B-WEG62EfGum7WEhupHQg" name="Fuse Sensor Data" incoming="_zNMM0G63EfGum7WEhupHQg" outgoing="_-J0ScG63EfGum7WEhupHQg"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_7m97MG63EfGum7WEhupHQg" name="Detect Obstacles" incoming="_-J0ScG63EfGum7WEhupHQg" outgoing="_mInGwG64EfGum7WEhupHQg"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_A5lEUG64EfGum7WEhupHQg" name="Assess Collision Risk" incoming="_mInGwG64EfGum7WEhupHQg" outgoing="_1W5j8G66EfGum7WEhupHQg"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_qiM9MG64EfGum7WEhupHQg" name="Obstacle Detected?" incoming="_1W5j8G66EfGum7WEhupHQg" outgoing="_IStYkG65EfGum7WEhupHQg _JTrGUG65EfGum7WEhupHQg"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_1_0QAG64EfGum7WEhupHQg" name="Begin Braking" incoming="_IStYkG65EfGum7WEhupHQg" outgoing="_CouRQG65EfGum7WEhupHQg"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_6ykNUG64EfGum7WEhupHQg" name="Continue Driving" incoming="_JTrGUG65EfGum7WEhupHQg" outgoing="_DgxTkG65EfGum7WEhupHQg"/>
+        <node xmi:type="uml:FlowFinalNode" xmi:id="_AkOC4G65EfGum7WEhupHQg" name="End Node" incoming="_CouRQG65EfGum7WEhupHQg _DgxTkG65EfGum7WEhupHQg"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_4i60AG66EfGum7WEhupHQg" name="Reject Sensor Data" incoming="_UqDd0G67EfGum7WEhupHQg" outgoing="_bf7JcG67EfGum7WEhupHQg"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_WclycG67EfGum7WEhupHQg" name="Log Security Event" incoming="_bf7JcG67EfGum7WEhupHQg" outgoing="_dO83EG67EfGum7WEhupHQg"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FFFP0GgzEfGmR83NCWlxrA" name="Component Layer">
       <ownedComment xmi:type="uml:Comment" xmi:id="_z3MlkGn1EfGmR83NCWlxrA">
@@ -139,6 +203,7 @@ implies self.fusionLatency &lt;= 20</body>
       <packagedElement xmi:type="uml:Class" xmi:id="_iPRsoGn1EfGmR83NCWlxrA" name="Steering"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_jd5b4Gn1EfGmR83NCWlxrA" name="Satellite Navigation System"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_TZVRAGqCEfGmR83NCWlxrA" name="Block10"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_mSC9UG69EfGum7WEhupHQg" name="Block10"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kd1_QGgvEfGmR83NCWlxrA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kd63wGgvEfGmR83NCWlxrA" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -211,4 +276,7 @@ implies self.fusionLatency &lt;= 20</body>
   <Blocks:Block xmi:id="_W7ZRoGrGEfGXLJvyXHhXzw" base_Class="_W7WOUGrGEfGXLJvyXHhXzw"/>
   <Blocks:Block xmi:id="_1KV_QGtEEfG-5dxW-sG0PQ" base_Class="_1KLnMGtEEfG-5dxW-sG0PQ"/>
   <Blocks:Block xmi:id="_UbEt4G3PEfG-5dxW-sG0PQ" base_Class="_Ua-nQG3PEfG-5dxW-sG0PQ"/>
+  <Blocks:Block xmi:id="_AqxZcG5OEfG-5dxW-sG0PQ" base_Class="_AqtvEG5OEfG-5dxW-sG0PQ"/>
+  <Blocks:Block xmi:id="_1dku8G5SEfG-5dxW-sG0PQ" base_Class="_1dhroG5SEfG-5dxW-sG0PQ"/>
+  <Blocks:Block xmi:id="_mSYUgG69EfGum7WEhupHQg" base_Class="_mSC9UG69EfGum7WEhupHQg"/>
 </xmi:XMI>
