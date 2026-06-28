@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:component="http:///schemas/component/_9wDzAG7VEfGum7WEhupHQg/3" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements http:///schemas/component/_9wDzAG7VEfGum7WEhupHQg/3 component.profile.uml#_9wDzAW7VEfGum7WEhupHQg">
   <uml:Model xmi:id="_kbJ3oGgvEfGmR83NCWlxrA" name="BaseModelProject">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_kgJsYGgvEfGmR83NCWlxrA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -117,7 +117,7 @@ implies self.fusionLatency &lt;= 20</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_mKU94G3PEfG-5dxW-sG0PQ" name="LiteralBoolean1" value="true"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ua-nR23PEfG-5dxW-sG0PQ" name="votingThreshold">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ua-nR23PEfG-5dxW-sG0PQ" name="minimumVotes">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Ua-nSG3PEfG-5dxW-sG0PQ" name="LiteralInteger1" value="2"/>
         </ownedAttribute>
@@ -152,7 +152,7 @@ implies self.fusionLatency &lt;= 20</body>
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_UuwS4G5TEfG-5dxW-sG0PQ" name="LiteralBoolean1" value="true"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__JQfMG5UEfG-5dxW-sG0PQ" memberEnd="__JSUYm5UEfG-5dxW-sG0PQ __JTigm5UEfG-5dxW-sG0PQ">
+      <packagedElement xmi:type="uml:Association" xmi:id="__JQfMG5UEfG-5dxW-sG0PQ" name="a" memberEnd="__JSUYm5UEfG-5dxW-sG0PQ __JTigm5UEfG-5dxW-sG0PQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__JSUYG5UEfG-5dxW-sG0PQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__JSUYW5UEfG-5dxW-sG0PQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -196,14 +196,69 @@ implies self.fusionLatency &lt;= 20</body>
         <body>Standard Automobile Components&#xD;
 </body>
       </ownedComment>
-      <packagedElement xmi:type="uml:Class" xmi:id="_DXrLMGjVEfGmR83NCWlxrA" name="Sensor"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_VXor0Gn1EfGmR83NCWlxrA" name="LiDAR"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_awIagGn1EfGmR83NCWlxrA" name="Radar"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_fVcYwGn1EfGmR83NCWlxrA" name="Braking System"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_iPRsoGn1EfGmR83NCWlxrA" name="Steering"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_jd5b4Gn1EfGmR83NCWlxrA" name="Satellite Navigation System"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_TZVRAGqCEfGmR83NCWlxrA" name="Block10"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_mSC9UG69EfGum7WEhupHQg" name="Block10"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_mSC9UG69EfGum7WEhupHQg" name="Camera">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_o1CgsG7MEfGum7WEhupHQg" name="Camera Constraint (Security Property)">
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="_o1GLEG7MEfGum7WEhupHQg" name="constraintSpec">
+            <language>OCL</language>
+            <body>self.encryptionEnabled = true</body>
+          </specification>
+        </ownedRule>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wg7noG7HEfGum7WEhupHQg" name="videoResolution">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3WvB0G7HEfGum7WEhupHQg" name="LiteralString1" value="1920x1080"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_K9vdoG7IEfGum7WEhupHQg" name="frameRate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_yBBE4G7IEfGum7WEhupHQg" name="LiteralInteger1" value="30"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NDynUG7MEfGum7WEhupHQg" name="encryptionEnabled">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_UHbpMG7MEfGum7WEhupHQg" name="LiteralBoolean1" value="true"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jUsXMG7EEfGum7WEhupHQg" name="LiDAR">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ubFGsG7NEfGum7WEhupHQg" name="range">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_PrRVAG7OEfGum7WEhupHQg" name="LiteralInteger1" value="100"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5weLQG7FEfGum7WEhupHQg" name="Sensor Fusion">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gibikG7SEfGum7WEhupHQg" name="processor">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_nUN_cG7SEfGum7WEhupHQg" name="LiteralString1" value="Processor&#xD;&#xA;"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_FqdRAG7GEfGum7WEhupHQg" name="Radar"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_MdZkcG7GEfGum7WEhupHQg" name="Braking System"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Pco8wG7GEfGum7WEhupHQg" name="Steering"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_WTccgG7GEfGum7WEhupHQg" name="Satellite Navigation"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hX_KMG7VEfGum7WEhupHQg" name="Authentication System">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Rm720G7WEfGum7WEhupHQg" name="algorithm">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_z33wcG7WEfGum7WEhupHQg" name="LiteralString1" value="algorithm(s) here"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-7i5QG7WEfGum7WEhupHQg" name="processingTime">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_JayfUG7XEfGum7WEhupHQg" name="LiteralInteger1" value="20"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hmM6cG7XEfGum7WEhupHQg" name="Voting System">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hmM6c27XEfGum7WEhupHQg" name="processingTime">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_hmM6dG7XEfGum7WEhupHQg" name="LiteralInteger1" value="20"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_85244G7XEfGum7WEhupHQg" name="minimumVotes">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_CFFAkG7YEfGum7WEhupHQg" name="LiteralInteger1" value="2"/>
+        </ownedAttribute>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__AY3oG7DEfGum7WEhupHQg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AgzcG7DEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="component.profile.uml#_9wDzAW7VEfGum7WEhupHQg"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="component.profile.uml#_-_qe4G7DEfGum7WEhupHQg"/>
+      </profileApplication>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kd1_QGgvEfGmR83NCWlxrA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kd63wGgvEfGmR83NCWlxrA" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -279,4 +334,20 @@ implies self.fusionLatency &lt;= 20</body>
   <Blocks:Block xmi:id="_AqxZcG5OEfG-5dxW-sG0PQ" base_Class="_AqtvEG5OEfG-5dxW-sG0PQ"/>
   <Blocks:Block xmi:id="_1dku8G5SEfG-5dxW-sG0PQ" base_Class="_1dhroG5SEfG-5dxW-sG0PQ"/>
   <Blocks:Block xmi:id="_mSYUgG69EfGum7WEhupHQg" base_Class="_mSC9UG69EfGum7WEhupHQg"/>
+  <component:hardware xmi:id="__AjPsG7DEfGum7WEhupHQg" base_Class="_mSC9UG69EfGum7WEhupHQg" deviceName="Camera" deviceID="1" latency="30"/>
+  <Blocks:Block xmi:id="_jU1hIG7EEfGum7WEhupHQg" base_Class="_jUsXMG7EEfGum7WEhupHQg"/>
+  <component:hardware xmi:id="_jU2vQG7EEfGum7WEhupHQg" base_Class="_jUsXMG7EEfGum7WEhupHQg" deviceName="LiDAR" deviceID="2"/>
+  <Blocks:Block xmi:id="_5wh1oG7FEfGum7WEhupHQg" base_Class="_5weLQG7FEfGum7WEhupHQg"/>
+  <component:hardware xmi:id="_5wjDwG7FEfGum7WEhupHQg" base_Class="_5weLQG7FEfGum7WEhupHQg" deviceName="name"/>
+  <Blocks:Block xmi:id="_Fqg7YG7GEfGum7WEhupHQg" base_Class="_FqdRAG7GEfGum7WEhupHQg"/>
+  <component:hardware xmi:id="_FqiwkG7GEfGum7WEhupHQg" base_Class="_FqdRAG7GEfGum7WEhupHQg" deviceName="name"/>
+  <Blocks:Block xmi:id="_MdcnwG7GEfGum7WEhupHQg" base_Class="_MdZkcG7GEfGum7WEhupHQg"/>
+  <component:hardware xmi:id="_Mdd14G7GEfGum7WEhupHQg" base_Class="_MdZkcG7GEfGum7WEhupHQg" deviceName="name"/>
+  <Blocks:Block xmi:id="_PcsAEG7GEfGum7WEhupHQg" base_Class="_Pco8wG7GEfGum7WEhupHQg"/>
+  <component:hardware xmi:id="_Pct1QG7GEfGum7WEhupHQg" base_Class="_Pco8wG7GEfGum7WEhupHQg" deviceName="name"/>
+  <Blocks:Block xmi:id="_WTeRwW7GEfGum7WEhupHQg" base_Class="_WTccgG7GEfGum7WEhupHQg"/>
+  <Blocks:Block xmi:id="_hYC0kG7VEfGum7WEhupHQg" base_Class="_hX_KMG7VEfGum7WEhupHQg"/>
+  <component:software xmi:id="_3LWI0G7VEfGum7WEhupHQg" base_Class="_hX_KMG7VEfGum7WEhupHQg" applicationName="defaultValue"/>
+  <Blocks:Block xmi:id="_hmQk0G7XEfGum7WEhupHQg" base_Class="_hmM6cG7XEfGum7WEhupHQg"/>
+  <component:software xmi:id="_hmRy8G7XEfGum7WEhupHQg" base_Class="_hmM6cG7XEfGum7WEhupHQg" applicationName="defaultValue"/>
 </xmi:XMI>

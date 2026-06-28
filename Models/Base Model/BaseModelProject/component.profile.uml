@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_-_qe4G7DEfGum7WEhupHQg" name="component" metaclassReference="_-_zo0G7DEfGum7WEhupHQg">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__APtsG7DEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qmm9QG7SEfGum7WEhupHQg" source="PapyrusVersion">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qmm9QW7SEfGum7WEhupHQg" key="Version" value="0.0.0"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qmm9Qm7SEfGum7WEhupHQg" key="Comment" value="&lt;undefined>"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qmm9Q27SEfGum7WEhupHQg" key="Copyright" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qmm9RG7SEfGum7WEhupHQg" key="Date" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qmm9RW7SEfGum7WEhupHQg" key="Author" value="&lt;undefined>"/>
+    </eAnnotations>
+    <contents xmi:type="ecore:EPackage" xmi:id="_9wDzAW7VEfGum7WEhupHQg" name="component" nsURI="http:///schemas/component/_9wDzAG7VEfGum7WEhupHQg/3" nsPrefix="component">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_9wDzAm7VEfGum7WEhupHQg" name="hardware">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9wDzA27VEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_-_tiMG7DEfGum7WEhupHQg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_9wDzBG7VEfGum7WEhupHQg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_9wDzBm7VEfGum7WEhupHQg" name="deviceName" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_9wDzCG7VEfGum7WEhupHQg" name="deviceID" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_9wDzCm7VEfGum7WEhupHQg" name="latency" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_9wDzDG7VEfGum7WEhupHQg" name="software">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9wDzDW7VEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3LSecG7VEfGum7WEhupHQg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_9wDzDm7VEfGum7WEhupHQg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_9wDzEG7VEfGum7WEhupHQg" name="applicationName" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_9wDzEm7VEfGum7WEhupHQg" name="applicationID" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_3LTskW7VEfGum7WEhupHQg" name="component" nsURI="http:///schemas/component/_3LTskG7VEfGum7WEhupHQg/2" nsPrefix="component">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3LTspG7VEfGum7WEhupHQg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3LTspW7VEfGum7WEhupHQg" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3LTspm7VEfGum7WEhupHQg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3LTsp27VEfGum7WEhupHQg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3LTsqG7VEfGum7WEhupHQg" key="Date" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3LTsqW7VEfGum7WEhupHQg" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3LTskm7VEfGum7WEhupHQg" name="hardware">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3LTsk27VEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_-_tiMG7DEfGum7WEhupHQg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3LTslG7VEfGum7WEhupHQg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_3LTslm7VEfGum7WEhupHQg" name="deviceName" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_3LTsmG7VEfGum7WEhupHQg" name="deviceID" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_3LTsmm7VEfGum7WEhupHQg" name="latency" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3LTsnG7VEfGum7WEhupHQg" name="software">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3LTsnW7VEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3LSecG7VEfGum7WEhupHQg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3LTsnm7VEfGum7WEhupHQg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_3LTsoG7VEfGum7WEhupHQg" name="applicationName" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_SN8NcW7LEfGum7WEhupHQg" name="component" nsURI="http:///schemas/component/_SN8NcG7LEfGum7WEhupHQg/1" nsPrefix="component">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_SN8Ncm7LEfGum7WEhupHQg" name="hardware">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SN8Nc27LEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_-_tiMG7DEfGum7WEhupHQg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_SN8NdG7LEfGum7WEhupHQg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_SN8Ndm7LEfGum7WEhupHQg" name="deviceName" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_SN8NeG7LEfGum7WEhupHQg" name="deviceID" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_SN8Nem7LEfGum7WEhupHQg" name="latency" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="__AQUwG7DEfGum7WEhupHQg" name="component" nsURI="http:///schemas/component/__AGjwG7DEfGum7WEhupHQg/0" nsPrefix="component">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AYQkG7DEfGum7WEhupHQg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__AYQkW7DEfGum7WEhupHQg" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__AYQkm7DEfGum7WEhupHQg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__AYQk27DEfGum7WEhupHQg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__AYQlG7DEfGum7WEhupHQg" key="Date" value="23/06/2026, 07:25"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__AYQlW7DEfGum7WEhupHQg" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="__AQUwW7DEfGum7WEhupHQg" name="hardware">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AQUwm7DEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_-_tiMG7DEfGum7WEhupHQg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="__AQUw27DEfGum7WEhupHQg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="__AQUxW7DEfGum7WEhupHQg" name="deviceName" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="__AQUx27DEfGum7WEhupHQg" name="deviceID" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_-_zo0G7DEfGum7WEhupHQg">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_-_tiMG7DEfGum7WEhupHQg" name="hardware">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-_5vcG7DEfGum7WEhupHQg" name="base_Class" association="_-_028G7DEfGum7WEhupHQg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-_69kG7DEfGum7WEhupHQg" name="deviceName">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-_69kW7DEfGum7WEhupHQg" name="deviceID">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_R3KFIG7LEfGum7WEhupHQg" name="latency">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_-_028G7DEfGum7WEhupHQg" name="Class_hardware" memberEnd="_-_1eAG7DEfGum7WEhupHQg _-_5vcG7DEfGum7WEhupHQg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_-_1eAG7DEfGum7WEhupHQg" name="extension_hardware" type="_-_tiMG7DEfGum7WEhupHQg" aggregation="composite" association="_-_028G7DEfGum7WEhupHQg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3LSecG7VEfGum7WEhupHQg" name="software">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3LTFgm7VEfGum7WEhupHQg" name="base_Class" association="_3LTFgG7VEfGum7WEhupHQg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3LTFg27VEfGum7WEhupHQg" name="applicationName">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9wCk4G7VEfGum7WEhupHQg" name="applicationID">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3LTFgG7VEfGum7WEhupHQg" name="Class_software" memberEnd="_3LTFgW7VEfGum7WEhupHQg _3LTFgm7VEfGum7WEhupHQg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3LTFgW7VEfGum7WEhupHQg" name="extension_software" type="_3LSecG7VEfGum7WEhupHQg" aggregation="composite" association="_3LTFgG7VEfGum7WEhupHQg"/>
+  </packagedElement>
+</uml:Profile>
