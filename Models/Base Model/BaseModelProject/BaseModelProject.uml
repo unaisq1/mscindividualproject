@@ -11,7 +11,7 @@
       <ownedComment xmi:type="uml:Comment" xmi:id="_GeAKwGrJEfGXLJvyXHhXzw"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_jc1lUGqMEfGXLJvyXHhXzw" name="Safe Vehicle Operation" visibility="public"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_LGtVsGqREfGXLJvyXHhXzw" name="Resist Malicious Control"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_4nvmYGqYEfGXLJvyXHhXzw" name="Sensor Failure Integrity"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4nvmYGqYEfGXLJvyXHhXzw" name="Sensor Integrity"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_awjh8GqdEfGXLJvyXHhXzw" name="Data Integrity"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_jIQskGrFEfGXLJvyXHhXzw" name="Derived from" client="_LGtVsGqREfGXLJvyXHhXzw" supplier="_jc1lUGqMEfGXLJvyXHhXzw"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_lRaxcGrFEfGXLJvyXHhXzw" name="Derived from" client="_awjh8GqdEfGXLJvyXHhXzw" supplier="_4nvmYGqYEfGXLJvyXHhXzw"/>
