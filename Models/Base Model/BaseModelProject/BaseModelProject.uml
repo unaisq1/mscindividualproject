@@ -8,7 +8,14 @@
       <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_vbFI4GgvEfGmR83NCWlxrA" name="System Layer">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_GeAKwGrJEfGXLJvyXHhXzw"/>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_GeAKwGrJEfGXLJvyXHhXzw">
+        <body>Time Unit (brakeResponseTime): Milliseconds (ms)&#xD;
+Distance Unit (obstacleDetectionRange): Metres (m)&#xD;
+Capacity/Usage Unit (systemAvailablity): Percentage (%)</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_d7xywHYMEfG_hu9eze5UeQ">
+        <body>Values are currently roughly assumed</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_jc1lUGqMEfGXLJvyXHhXzw" name="Safe Vehicle Operation" visibility="public"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_LGtVsGqREfGXLJvyXHhXzw" name="Resist Malicious Control"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_4nvmYGqYEfGXLJvyXHhXzw" name="Sensor Integrity"/>
@@ -35,12 +42,6 @@
             <body>self.systemAvailability = 0.99</body>
           </specification>
         </ownedRule>
-        <ownedRule xmi:type="uml:Constraint" xmi:id="_CUEn4GtAEfG-5dxW-sG0PQ" name="EBS Constraint 4 (Security Property)">
-          <specification xmi:type="uml:OpaqueExpression" xmi:id="_CUHrMGtAEfG-5dxW-sG0PQ" name="constraintSpec">
-            <language>OCL</language>
-            <body>self.attackResistanceLevel = HIGH</body>
-          </specification>
-        </ownedRule>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_4ip8IGrGEfGXLJvyXHhXzw" name="brakeResponseTime" visibility="public">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_x6I6kGrHEfGXLJvyXHhXzw" name="LiteralInteger1" value="100"/>
@@ -52,10 +53,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gnAwcGrIEfGXLJvyXHhXzw" name="systemAvailability">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
           <defaultValue xmi:type="uml:LiteralReal" xmi:id="_lqEaoGrIEfGXLJvyXHhXzw" name="LiteralReal1" value="0.99"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_xVvXkGrIEfGXLJvyXHhXzw" name="attackResistanceLevel">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <defaultValue xmi:type="uml:LiteralString" xmi:id="_2I6ysGrIEfGXLJvyXHhXzw" name="LiteralString1" value="HIGH"/>
         </ownedAttribute>
       </packagedElement>
     </packagedElement>
@@ -152,7 +149,7 @@ implies self.fusionLatency &lt;= 20</body>
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_UuwS4G5TEfG-5dxW-sG0PQ" name="LiteralBoolean1" value="true"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__JQfMG5UEfG-5dxW-sG0PQ" name="a" memberEnd="__JSUYm5UEfG-5dxW-sG0PQ __JTigm5UEfG-5dxW-sG0PQ">
+      <packagedElement xmi:type="uml:Association" xmi:id="__JQfMG5UEfG-5dxW-sG0PQ" name="link" memberEnd="__JSUYm5UEfG-5dxW-sG0PQ __JTigm5UEfG-5dxW-sG0PQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__JSUYG5UEfG-5dxW-sG0PQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__JSUYW5UEfG-5dxW-sG0PQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
