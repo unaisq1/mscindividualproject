@@ -57,6 +57,9 @@ Capacity/Usage Unit (systemAvailablity): Percentage (%)</body>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_3JeX8GgvEfGmR83NCWlxrA" name="Functional Layer">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Pcs0EHswEfGVnpeYmAPPiA">
+        <body>Values are currently roughly assumed</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Interaction" xmi:id="_yVSEcGqFEfGmR83NCWlxrA" name="Interaction2"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_1KLnMGtEEfG-5dxW-sG0PQ" name="Obstacle Detection Function">
         <ownedRule xmi:type="uml:Constraint" xmi:id="_u_-mYGtSEfG-5dxW-sG0PQ" name="ODF Constraint 1 (Safety Property)">
@@ -193,6 +196,15 @@ implies self.fusionLatency &lt;= 20</body>
         <body>Standard Automobile Components&#xD;
 </body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_vtr4cHuOEfGVnpeYmAPPiA">
+        <body>sensorType can either be LiDAR, Camera, or Radar</body>
+      </ownedComment>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_pmzqIHZGEfG_hu9eze5UeQ" name="Constraint19">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_pm6X0HZGEfG_hu9eze5UeQ" name="constraintSpec">
+          <language>OCL</language>
+          <body>true</body>
+        </specification>
+      </ownedRule>
       <packagedElement xmi:type="uml:Class" xmi:id="_TZVRAGqCEfGmR83NCWlxrA" name="Block10"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_mSC9UG69EfGum7WEhupHQg" name="Camera">
         <ownedRule xmi:type="uml:Constraint" xmi:id="_o1CgsG7MEfGum7WEhupHQg" name="Camera Constraint (Security Property)">
@@ -250,6 +262,23 @@ implies self.fusionLatency &lt;= 20</body>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_CFFAkG7YEfGum7WEhupHQg" name="LiteralInteger1" value="2"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_cgDMEHZCEfG_hu9eze5UeQ" name="Sensor">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UGsuUHuOEfGVnpeYmAPPiA" name="sensorType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pvKrkHuOEfGVnpeYmAPPiA" name="range">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hBkz4HuPEfGVnpeYmAPPiA" name="latency"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_L8hS4HZDEfG_hu9eze5UeQ" name="Authentication System">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_7v1mQHuPEfGVnpeYmAPPiA" name="algorithm">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_SCymMHZGEfG_hu9eze5UeQ" name="Voting System"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_dW7M4HZGEfG_hu9eze5UeQ" name="Fusion Processor"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_7RwOAHuNEfGVnpeYmAPPiA" name="IGatheringData"/>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__AY3oG7DEfGum7WEhupHQg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AgzcG7DEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="component.profile.uml#_9wDzAW7VEfGum7WEhupHQg"/>
@@ -347,4 +376,5 @@ implies self.fusionLatency &lt;= 20</body>
   <component:software xmi:id="_3LWI0G7VEfGum7WEhupHQg" base_Class="_hX_KMG7VEfGum7WEhupHQg" applicationName="defaultValue"/>
   <Blocks:Block xmi:id="_hmQk0G7XEfGum7WEhupHQg" base_Class="_hmM6cG7XEfGum7WEhupHQg"/>
   <component:software xmi:id="_hmRy8G7XEfGum7WEhupHQg" base_Class="_hmM6cG7XEfGum7WEhupHQg" applicationName="defaultValue"/>
+  <component:hardware xmi:id="_Lj6c8HolEfG_hu9eze5UeQ" base_Class="_cgDMEHZCEfG_hu9eze5UeQ"/>
 </xmi:XMI>
