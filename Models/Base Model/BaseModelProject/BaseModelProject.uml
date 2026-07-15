@@ -197,7 +197,7 @@ implies self.fusionLatency &lt;= 20</body>
 </body>
       </ownedComment>
       <ownedComment xmi:type="uml:Comment" xmi:id="_vtr4cHuOEfGVnpeYmAPPiA">
-        <body>sensorType can either be LiDAR, Camera, or Radar</body>
+        <body>sensorType can either be LiDAR, Camera, or Radar (enum data type)</body>
       </ownedComment>
       <ownedRule xmi:type="uml:Constraint" xmi:id="_pmzqIHZGEfG_hu9eze5UeQ" name="Constraint19">
         <specification xmi:type="uml:OpaqueExpression" xmi:id="_pm6X0HZGEfG_hu9eze5UeQ" name="constraintSpec">
@@ -269,15 +269,44 @@ implies self.fusionLatency &lt;= 20</body>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_pvKrkHuOEfGVnpeYmAPPiA" name="range">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_hBkz4HuPEfGVnpeYmAPPiA" name="latency"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hBkz4HuPEfGVnpeYmAPPiA" name="latency">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_L8hS4HZDEfG_hu9eze5UeQ" name="Authentication System">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_7v1mQHuPEfGVnpeYmAPPiA" name="algorithm">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_AjlBAH7QEfGVnpeYmAPPiA" name="processingTime">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_baxbYH8cEfGVnpeYmAPPiA" name="keyLength">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_SCymMHZGEfG_hu9eze5UeQ" name="Voting System"/>
-      <packagedElement xmi:type="uml:Component" xmi:id="_dW7M4HZGEfG_hu9eze5UeQ" name="Fusion Processor"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_SCymMHZGEfG_hu9eze5UeQ" name="Voting System">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_j806kH-hEfGVnpeYmAPPiA" name="minimumVotes">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_9M9iEH-hEfGVnpeYmAPPiA" name="LiteralInteger1" value="2"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_AvDIwH-iEfGVnpeYmAPPiA" name="totalSources">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_dW7M4HZGEfG_hu9eze5UeQ" name="Fusion Processor">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_KOp8YH8WEfGVnpeYmAPPiA" name="processorType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Qx9RUH8WEfGVnpeYmAPPiA" name="cpuAllocation">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_F23x4H8YEfGVnpeYmAPPiA" name="cryptoOverhead">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_knKu8H8bEfGVnpeYmAPPiA" name="processingTime">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_7RwOAHuNEfGVnpeYmAPPiA" name="IGatheringData"/>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__AY3oG7DEfGum7WEhupHQg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AgzcG7DEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -377,4 +406,6 @@ implies self.fusionLatency &lt;= 20</body>
   <Blocks:Block xmi:id="_hmQk0G7XEfGum7WEhupHQg" base_Class="_hmM6cG7XEfGum7WEhupHQg"/>
   <component:software xmi:id="_hmRy8G7XEfGum7WEhupHQg" base_Class="_hmM6cG7XEfGum7WEhupHQg" applicationName="defaultValue"/>
   <component:hardware xmi:id="_Lj6c8HolEfG_hu9eze5UeQ" base_Class="_cgDMEHZCEfG_hu9eze5UeQ"/>
+  <component:hardware xmi:id="_zYbOUH7PEfGVnpeYmAPPiA" base_Class="_dW7M4HZGEfG_hu9eze5UeQ"/>
+  <component:software xmi:id="_2s2McH7PEfGVnpeYmAPPiA" base_Class="_L8hS4HZDEfG_hu9eze5UeQ"/>
 </xmi:XMI>
