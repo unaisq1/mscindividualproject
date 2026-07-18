@@ -307,7 +307,12 @@ implies self.fusionLatency &lt;= 20</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_7RwOAHuNEfGVnpeYmAPPiA" name="IGatheringData"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_7RwOAHuNEfGVnpeYmAPPiA" name="IGatherData">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_o6R8EICeEfGa8cDegiFfVw" name="collectData"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_DaY2YIJPEfGa8cDegiFfVw" name="IAuthenticateData"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Kwp5UIJPEfGa8cDegiFfVw" name="IVoteData"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_MOtLsIJPEfGa8cDegiFfVw" name="IFuseData"/>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__AY3oG7DEfGum7WEhupHQg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AgzcG7DEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="component.profile.uml#_9wDzAW7VEfGum7WEhupHQg"/>
