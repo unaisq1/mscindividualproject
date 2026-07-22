@@ -199,10 +199,17 @@ implies self.fusionLatency &lt;= 20</body>
       <ownedComment xmi:type="uml:Comment" xmi:id="_vtr4cHuOEfGVnpeYmAPPiA">
         <body>sensorType can either be LiDAR, Camera, or Radar (enum data type)</body>
       </ownedComment>
-      <ownedRule xmi:type="uml:Constraint" xmi:id="_pmzqIHZGEfG_hu9eze5UeQ" name="Constraint19">
-        <specification xmi:type="uml:OpaqueExpression" xmi:id="_pm6X0HZGEfG_hu9eze5UeQ" name="constraintSpec">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_YfTckIVuEfGa8cDegiFfVw">
+        <body>Values are roughly assumed&#xD;
+&#xD;
+</body>
+      </ownedComment>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_pmzqIHZGEfG_hu9eze5UeQ" name="Sensor Constraint 1 (Security Property)" constrainedElement="_cgDMEHZCEfG_hu9eze5UeQ">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_pm6X0HZGEfG_hu9eze5UeQ" name="Sensor Constraint 1 (Security Property)">
           <language>OCL</language>
-          <body>true</body>
+          <body>self.encryptionEnabled = true&#xD;
+and self.latency &lt;= 30&#xD;
+</body>
         </specification>
       </ownedRule>
       <packagedElement xmi:type="uml:Class" xmi:id="_TZVRAGqCEfGmR83NCWlxrA" name="Block10"/>
@@ -272,6 +279,9 @@ implies self.fusionLatency &lt;= 20</body>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_hBkz4HuPEfGVnpeYmAPPiA" name="latency">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_37lSsIVtEfGa8cDegiFfVw" name="encryptionEnabled">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_L8hS4HZDEfG_hu9eze5UeQ" name="Authentication System">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_7v1mQHuPEfGVnpeYmAPPiA" name="algorithm">
@@ -310,9 +320,12 @@ implies self.fusionLatency &lt;= 20</body>
       <packagedElement xmi:type="uml:Interface" xmi:id="_7RwOAHuNEfGVnpeYmAPPiA" name="IGatherData">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_o6R8EICeEfGa8cDegiFfVw" name="collectData"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_DaY2YIJPEfGa8cDegiFfVw" name="IAuthenticateData"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_Kwp5UIJPEfGa8cDegiFfVw" name="IVoteData"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_MOtLsIJPEfGa8cDegiFfVw" name="IFuseData"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_DaY2YIJPEfGa8cDegiFfVw" name="IAuthenticateData">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_SFgo4IPBEfGa8cDegiFfVw" name="authenticateData"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Kwp5UIJPEfGa8cDegiFfVw" name="IVoteData">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_jrTd8IVNEfGa8cDegiFfVw" name="voteData"/>
+      </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__AY3oG7DEfGum7WEhupHQg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AgzcG7DEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="component.profile.uml#_9wDzAW7VEfGum7WEhupHQg"/>
