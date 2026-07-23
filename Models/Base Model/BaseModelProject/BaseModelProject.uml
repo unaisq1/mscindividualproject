@@ -212,6 +212,12 @@ and self.latency &lt;= 30&#xD;
 </body>
         </specification>
       </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_by6mUIYGEfGzIdxIAce5yg" name="Fusion Constraint 1 (Safety and Security Properties)" constrainedElement="_dW7M4HZGEfG_hu9eze5UeQ">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_bzDwQIYGEfGzIdxIAce5yg" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.cryptoOverhead + self.processingTime &lt;= 50</body>
+        </specification>
+      </ownedRule>
       <packagedElement xmi:type="uml:Class" xmi:id="_TZVRAGqCEfGmR83NCWlxrA" name="Block10"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_mSC9UG69EfGum7WEhupHQg" name="Camera">
         <ownedRule xmi:type="uml:Constraint" xmi:id="_o1CgsG7MEfGum7WEhupHQg" name="Camera Constraint (Security Property)">
@@ -282,6 +288,8 @@ and self.latency &lt;= 30&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_37lSsIVtEfGa8cDegiFfVw" name="encryptionEnabled">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ZoPIYIYPEfGzIdxIAce5yg" name="Port6" type="_7RwOAHuNEfGVnpeYmAPPiA" aggregation="composite"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zTTxsIYKEfGzIdxIAce5yg" client="_cgDMEHZCEfG_hu9eze5UeQ" supplier="_7RwOAHuNEfGVnpeYmAPPiA" contract="_7RwOAHuNEfGVnpeYmAPPiA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_L8hS4HZDEfG_hu9eze5UeQ" name="Authentication System">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_7v1mQHuPEfGVnpeYmAPPiA" name="algorithm">
@@ -293,6 +301,10 @@ and self.latency &lt;= 30&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_baxbYH8cEfGVnpeYmAPPiA" name="keyLength">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_-3-c0IYMEfGzIdxIAce5yg" name="Port5" type="_7RwOAHuNEfGVnpeYmAPPiA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_UpwKQIYREfGTtd6yczNHGg" name="Port7" type="_DaY2YIJPEfGa8cDegiFfVw" aggregation="composite"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NJFqoIYQEfGTtd6yczNHGg" client="_L8hS4HZDEfG_hu9eze5UeQ" supplier="_DaY2YIJPEfGa8cDegiFfVw" contract="_DaY2YIJPEfGa8cDegiFfVw"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_4Q00kIYKEfGzIdxIAce5yg" client="_L8hS4HZDEfG_hu9eze5UeQ" supplier="_7RwOAHuNEfGVnpeYmAPPiA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_SCymMHZGEfG_hu9eze5UeQ" name="Voting System">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_j806kH-hEfGVnpeYmAPPiA" name="minimumVotes">
@@ -302,6 +314,10 @@ and self.latency &lt;= 30&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_AvDIwH-iEfGVnpeYmAPPiA" name="totalSources">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_QT91wIYREfGTtd6yczNHGg" name="Port4" type="_DaY2YIJPEfGa8cDegiFfVw" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_y20ecIYUEfGTtd6yczNHGg" name="Port6" type="_Kwp5UIJPEfGa8cDegiFfVw" aggregation="composite"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vSKE4IYUEfGTtd6yczNHGg" client="_SCymMHZGEfG_hu9eze5UeQ" supplier="_Kwp5UIJPEfGa8cDegiFfVw" contract="_Kwp5UIJPEfGa8cDegiFfVw"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_TShuEIYQEfGTtd6yczNHGg" client="_SCymMHZGEfG_hu9eze5UeQ" supplier="_DaY2YIJPEfGa8cDegiFfVw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_dW7M4HZGEfG_hu9eze5UeQ" name="Fusion Processor">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_KOp8YH8WEfGVnpeYmAPPiA" name="processorType">
@@ -316,16 +332,22 @@ and self.latency &lt;= 30&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_knKu8H8bEfGVnpeYmAPPiA" name="processingTime">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_0XK24IYUEfGTtd6yczNHGg" name="Port6" type="_Kwp5UIJPEfGa8cDegiFfVw" aggregation="composite"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_xs0wgIYUEfGTtd6yczNHGg" client="_dW7M4HZGEfG_hu9eze5UeQ" supplier="_Kwp5UIJPEfGa8cDegiFfVw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_7RwOAHuNEfGVnpeYmAPPiA" name="IGatherData">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_o6R8EICeEfGa8cDegiFfVw" name="collectData"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_DaY2YIJPEfGa8cDegiFfVw" name="IAuthenticateData">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_SFgo4IPBEfGa8cDegiFfVw" name="authenticateData"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_N5P8QIYQEfGTtd6yczNHGg" name="Operation2"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_Kwp5UIJPEfGa8cDegiFfVw" name="IVoteData">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_jrTd8IVNEfGa8cDegiFfVw" name="voteData"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_k6hU8IYPEfGzIdxIAce5yg" client="_-3-c0IYMEfGzIdxIAce5yg" supplier="_ZoPIYIYPEfGzIdxIAce5yg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_0W6fkIYREfGTtd6yczNHGg" client="_QT91wIYREfGTtd6yczNHGg" supplier="_UpwKQIYREfGTtd6yczNHGg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_E8UEMIYVEfGTtd6yczNHGg" client="_0XK24IYUEfGTtd6yczNHGg" supplier="_y20ecIYUEfGTtd6yczNHGg"/>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__AY3oG7DEfGum7WEhupHQg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AgzcG7DEfGum7WEhupHQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="component.profile.uml#_9wDzAW7VEfGum7WEhupHQg"/>
@@ -426,4 +448,5 @@ and self.latency &lt;= 30&#xD;
   <component:hardware xmi:id="_Lj6c8HolEfG_hu9eze5UeQ" base_Class="_cgDMEHZCEfG_hu9eze5UeQ"/>
   <component:hardware xmi:id="_zYbOUH7PEfGVnpeYmAPPiA" base_Class="_dW7M4HZGEfG_hu9eze5UeQ"/>
   <component:software xmi:id="_2s2McH7PEfGVnpeYmAPPiA" base_Class="_L8hS4HZDEfG_hu9eze5UeQ"/>
+  <component:software xmi:id="_gpfAwIYTEfGTtd6yczNHGg" base_Class="_SCymMHZGEfG_hu9eze5UeQ"/>
 </xmi:XMI>
