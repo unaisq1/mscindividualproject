@@ -299,6 +299,111 @@ and self.latency &lt;= 30&#xD;
         <appliedProfile xmi:type="uml:Profile" href="component.profile.uml#_-_qe4G7DEfGum7WEhupHQg"/>
       </profileApplication>
     </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_K7iHcIeQEfGftO8NksHeYw" name="Architectural Constructs">
+      <packagedElement xmi:type="uml:Package" xmi:id="_OebmcIeQEfGftO8NksHeYw" name="Hierarchical Decomposition"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_e51B4IeQEfGftO8NksHeYw" name="Redundancy"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_dtqJsIeQEfGftO8NksHeYw" name="Shared Resources">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_l18DIIe2EfGftO8NksHeYw">
+          <body>Shared Constraint evaluates to False, due to &#xD;
+&quot;cryptoOverhead&quot; &#xD;
+and &quot;processingTime&quot; both contributing to total &#xD;
+time taken, which is more than the limit provided &#xD;
+(50ms)&#xD;
+</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_BGU1sIe4EfGftO8NksHeYw">
+          <body>Dedicated Constraint evaluates to False, due to &#xD;
+&quot;cryptoOverhead&quot; &#xD;
+and &quot;processingTime&quot; both contributing to total &#xD;
+time taken, which is more than the limit provided &#xD;
+(50ms)&#xD;
+</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9qqqIIeWEfGftO8NksHeYw" name="Fusion Processor Shared">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_mLL2AIeYEfGftO8NksHeYw" name="Shared Constraint">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_mLfYAIeYEfGftO8NksHeYw" name="constraintSpec">
+              <language>OCL</language>
+              <body>cryptoOverhead + processingTime &lt;= 50</body>
+            </specification>
+          </ownedRule>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_GkSEQIeZEfGftO8NksHeYw" name="cryptoOverhead">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_B9ICMIe1EfGftO8NksHeYw" name="LiteralInteger1" value="15"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_QZvSMIe0EfGftO8NksHeYw" name="processingTime">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Uwxj4Ie0EfGftO8NksHeYw" name="LiteralInteger1" value="40"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kTQaUIe0EfGftO8NksHeYw" name="Fusion Processor Dedicated">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_kTQaUYe0EfGftO8NksHeYw" name="Constraint3">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_kTQaUoe0EfGftO8NksHeYw" name="constraintSpec">
+              <language>OCL</language>
+              <body>true</body>
+            </specification>
+          </ownedRule>
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_SJQ5oIe1EfGftO8NksHeYw" name="Dedicated Constraint">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_SJSHwIe1EfGftO8NksHeYw" name="constraintSpec">
+              <language>OCL</language>
+              <body>cryptoOverhead + processingTime &lt;= 50</body>
+            </specification>
+          </ownedRule>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kTQaU4e0EfGftO8NksHeYw" name="cryptoOverhead">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_GlbqEIe1EfGftO8NksHeYw" name="LiteralInteger1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kTQaVIe0EfGftO8NksHeYw" name="processingTime">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_kTQaVYe0EfGftO8NksHeYw" name="LiteralInteger1" value="40"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_XtR_AIe5EfGftO8NksHeYw" name="Shared Resources">
+          <ownedComment xmi:type="uml:Comment" xmi:id="__cccsIn6EfGVwI18gr1osA">
+            <body>&quot;cryptoOverhead&quot; + &quot;processingTime&quot; = 55ms > 50ms deadline&#xD;
+Security mechanism (cryptoOverhead) breaks safety timing, therefore, &#xD;
+Cross-Layer Composition fails. &#xD;
+</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qaIJYIoOEfGVwI18gr1osA">
+            <body>Authentication_System.cryptoOverhead = 15ms&#xD;
+FusionProcessorShared.processingTime = 40ms</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_JIUZYIe8EfGVwI18gr1osA" name="Camera" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_1TfhgIkPEfGVwI18gr1osA" name="LiDAR" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TzYycIkQEfGVwI18gr1osA" name="Radar" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XIcCsIkQEfGVwI18gr1osA" name="Authentication System" type="_L8hS4HZDEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_0CvfgIm4EfGVwI18gr1osA" name="Voting System" type="_SCymMHZGEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_sXQgEInwEfGVwI18gr1osA" name="FusionProcessorShared" type="_dW7M4HZGEfG_hu9eze5UeQ" aggregation="composite"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_KpBI0Im5EfGVwI18gr1osA" informationSource="_JIUZYIe8EfGVwI18gr1osA" informationTarget="_XIcCsIkQEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_PS3o0Im5EfGVwI18gr1osA" informationSource="_1TfhgIkPEfGVwI18gr1osA" informationTarget="_XIcCsIkQEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_VFzQwIm5EfGVwI18gr1osA" informationSource="_TzYycIkQEfGVwI18gr1osA" informationTarget="_XIcCsIkQEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_wjGzcIoGEfGVwI18gr1osA" informationSource="_XIcCsIkQEfGVwI18gr1osA" informationTarget="_0CvfgIm4EfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_zkncoIoGEfGVwI18gr1osA" informationSource="_0CvfgIm4EfGVwI18gr1osA" informationTarget="_sXQgEInwEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_dc434IoDEfGVwI18gr1osA" name="Dedicated Resources">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_-gla8IoGEfGVwI18gr1osA">
+            <body>&quot;cryptoOverhead&quot; + &quot;processingTime&quot; = 40ms &lt; 50ms deadline&#xD;
+Cross-Layer Composition holds. &#xD;
+</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_S-VX4IoPEfGVwI18gr1osA">
+            <body>Authentication_System.cryptoOverhead = 15ms&#xD;
+FusionProcessorShared.processingTime = 40ms</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-gmpEIoGEfGVwI18gr1osA" name="Camera" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-gmpEYoGEfGVwI18gr1osA" name="LiDAR" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-gnQIIoGEfGVwI18gr1osA" name="Radar" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-gnQIYoGEfGVwI18gr1osA" name="Authentication System" type="_L8hS4HZDEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-gnQIooGEfGVwI18gr1osA" name="Voting System" type="_SCymMHZGEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_xoVrQIoIEfGVwI18gr1osA" name="FusionProcessorDedicated" type="_dW7M4HZGEfG_hu9eze5UeQ" aggregation="composite"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_zpg8AIoMEfGVwI18gr1osA" informationSource="_-gmpEIoGEfGVwI18gr1osA" informationTarget="_-gnQIYoGEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_2Bv-sIoMEfGVwI18gr1osA" informationSource="_-gmpEYoGEfGVwI18gr1osA" informationTarget="_-gnQIYoGEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_3eSOIIoMEfGVwI18gr1osA" informationSource="_-gnQIIoGEfGVwI18gr1osA" informationTarget="_-gnQIYoGEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_I8l4EIoNEfGVwI18gr1osA" informationSource="_-gnQIYoGEfGVwI18gr1osA" informationTarget="_-gnQIooGEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Kg48YIoNEfGVwI18gr1osA" informationSource="_-gnQIooGEfGVwI18gr1osA" informationTarget="_xoVrQIoIEfGVwI18gr1osA"/>
+      </packagedElement>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kd1_QGgvEfGmR83NCWlxrA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kd63wGgvEfGmR83NCWlxrA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
@@ -376,4 +481,8 @@ and self.latency &lt;= 30&#xD;
   <component:hardware xmi:id="_zYbOUH7PEfGVnpeYmAPPiA" base_Class="_dW7M4HZGEfG_hu9eze5UeQ"/>
   <component:software xmi:id="_2s2McH7PEfGVnpeYmAPPiA" base_Class="_L8hS4HZDEfG_hu9eze5UeQ"/>
   <component:software xmi:id="_gpfAwIYTEfGTtd6yczNHGg" base_Class="_SCymMHZGEfG_hu9eze5UeQ"/>
+  <Blocks:Block xmi:id="_9qx-4IeWEfGftO8NksHeYw" base_Class="_9qqqIIeWEfGftO8NksHeYw"/>
+  <Blocks:Block xmi:id="_kTUrwIe0EfGftO8NksHeYw" base_Class="_kTQaUIe0EfGftO8NksHeYw"/>
+  <Blocks:Block xmi:id="_XtVCUIe5EfGftO8NksHeYw" base_Class="_XtR_AIe5EfGftO8NksHeYw"/>
+  <Blocks:Block xmi:id="_dc77MIoDEfGVwI18gr1osA" base_Class="_dc434IoDEfGVwI18gr1osA"/>
 </xmi:XMI>
