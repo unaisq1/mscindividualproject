@@ -300,7 +300,16 @@ and self.latency &lt;= 30&#xD;
       </profileApplication>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_K7iHcIeQEfGftO8NksHeYw" name="Architectural Constructs">
-      <packagedElement xmi:type="uml:Package" xmi:id="_OebmcIeQEfGftO8NksHeYw" name="Hierarchical Decomposition"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_OebmcIeQEfGftO8NksHeYw" name="Hierarchical Decomposition">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_rIl4IIueEfGVwI18gr1osA">
+          <body>&quot;totalProcessingTime&quot; = 55ms</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RcveoIuWEfGVwI18gr1osA" name="AVSystemNonLayered">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_3QprkIudEfGVwI18gr1osA" name="totalProcessingTime">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+        </packagedElement>
+      </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_e51B4IeQEfGftO8NksHeYw" name="Redundancy">
         <ownedComment xmi:type="uml:Comment" xmi:id="_y5ywAIqgEfGVwI18gr1osA">
           <body>totalSources: 1&#xD;
@@ -331,14 +340,61 @@ minimumVotes: 2</body>
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_it59IIrVEfGVwI18gr1osA" name="No Redundancy">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_EpTSEIt6EfGVwI18gr1osA">
+            <body>1 sensor, instead of 3 sensors &#xD;
+that can fall on each other &#xD;
+if either one fails</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_x8mhYIuEEfGVwI18gr1osA">
+            <body>Use of a dedicated Fusion Processor to prevent other &#xD;
+variables of cryptography and processing timings &#xD;
+affect evaluation of number of sensors</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_DeLFQIuGEfGVwI18gr1osA">
+            <body>&quot;totalSources&quot; = 1&#xD;
+&quot;minimumVotes&quot; = 1&#xD;
+Single point of failure, if the one sensor is spoofed or fails, &#xD;
+there's no other source to vote for or against, &#xD;
+hence a lack of trustworthy protection</body>
+          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWBhkIryEfGVwI18gr1osA" name="Camera" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWKrgIryEfGVwI18gr1osA" name="Authentication System" type="_L8hS4HZDEfG_hu9eze5UeQ" aggregation="composite"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWMgsIryEfGVwI18gr1osA" name="Voting System" type="_SCymMHZGEfG_hu9eze5UeQ" aggregation="composite"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWOV4IryEfGVwI18gr1osA" name="FusionProcessorShared" type="_dW7M4HZGEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWOV4IryEfGVwI18gr1osA" name="FusionProcessorDedicated" type="_dW7M4HZGEfG_hu9eze5UeQ" aggregation="composite"/>
         </packagedElement>
         <packagedElement xmi:type="uml:InformationFlow" xmi:id="_no-0YIrzEfGVwI18gr1osA" informationSource="_ZWBhkIryEfGVwI18gr1osA" informationTarget="_ZWKrgIryEfGVwI18gr1osA"/>
         <packagedElement xmi:type="uml:InformationFlow" xmi:id="_sSlcwIrzEfGVwI18gr1osA" informationSource="_ZWKrgIryEfGVwI18gr1osA _it59IIrVEfGVwI18gr1osA" informationTarget="_ZWMgsIryEfGVwI18gr1osA"/>
         <packagedElement xmi:type="uml:InformationFlow" xmi:id="_xOTI0IrzEfGVwI18gr1osA" informationSource="_ZWMgsIryEfGVwI18gr1osA" informationTarget="_ZWOV4IryEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_1agrUIuHEfGVwI18gr1osA" name="Redundancy">
+          <ownedComment xmi:type="uml:Comment" xmi:id="__G87cIuHEfGVwI18gr1osA">
+            <body>3 sensors that can fall on each other &#xD;
+if either one fails or gets spoofed</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="__G-woIuHEfGVwI18gr1osA">
+            <body>&quot;totalSources&quot; = 3&#xD;
+&quot;minimumVotes&quot; = 2&#xD;
+One failed source: the remaining two sources &#xD;
+(LiDAR and Radar for example) still satisfy minimumVotes, &#xD;
+so VotingSystem still produces a trustworthy output.&#xD;
+</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="__HAl0IuHEfGVwI18gr1osA">
+            <body>Use of a dedicated Fusion Processor to prevent other &#xD;
+variables of cryptography and processing timings &#xD;
+affect evaluation of number of sensors</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="__G54IIuHEfGVwI18gr1osA" name="Voting System" type="_SCymMHZGEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="__HBM4IuHEfGVwI18gr1osA" name="FusionProcessorDedicated" type="_dW7M4HZGEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="__HCbAIuHEfGVwI18gr1osA" name="Authentication System" type="_L8hS4HZDEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="__HDCEIuHEfGVwI18gr1osA" name="Camera" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_m9vN0IuJEfGVwI18gr1osA" name="LiDAR" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_m9yRIIuJEfGVwI18gr1osA" name="Radar" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_j6bYYIuKEfGVwI18gr1osA" informationSource="__HDCEIuHEfGVwI18gr1osA" informationTarget="__HCbAIuHEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_yMgW4IuKEfGVwI18gr1osA" informationSource="_m9vN0IuJEfGVwI18gr1osA" informationTarget="__HCbAIuHEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_D-7PoIuLEfGVwI18gr1osA" informationSource="_m9yRIIuJEfGVwI18gr1osA" informationTarget="__HCbAIuHEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_HbSo0IuLEfGVwI18gr1osA" informationSource="__HCbAIuHEfGVwI18gr1osA" informationTarget="__G54IIuHEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_SqJG4IuLEfGVwI18gr1osA" informationSource="__G54IIuHEfGVwI18gr1osA" informationTarget="__HBM4IuHEfGVwI18gr1osA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_dtqJsIeQEfGftO8NksHeYw" name="Shared Resources">
         <ownedComment xmi:type="uml:Comment" xmi:id="_l18DIIe2EfGftO8NksHeYw">
@@ -526,4 +582,6 @@ FusionProcessorDedicated.processingTime = 40ms</body>
   <Blocks:Block xmi:id="_Y6Ke4IqYEfGVwI18gr1osA" base_Class="_Y6BU8IqYEfGVwI18gr1osA"/>
   <Blocks:Block xmi:id="_aNBN4IqYEfGVwI18gr1osA" base_Class="_aMrPoIqYEfGVwI18gr1osA"/>
   <Blocks:Block xmi:id="_iuFjUIrVEfGVwI18gr1osA" base_Class="_it59IIrVEfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_1atfoIuHEfGVwI18gr1osA" base_Class="_1agrUIuHEfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_Rc1lQIuWEfGVwI18gr1osA" base_Class="_RcveoIuWEfGVwI18gr1osA"/>
 </xmi:XMI>
