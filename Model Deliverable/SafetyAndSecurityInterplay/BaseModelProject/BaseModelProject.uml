@@ -301,7 +301,45 @@ and self.latency &lt;= 30&#xD;
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_K7iHcIeQEfGftO8NksHeYw" name="Architectural Constructs">
       <packagedElement xmi:type="uml:Package" xmi:id="_OebmcIeQEfGftO8NksHeYw" name="Hierarchical Decomposition"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_e51B4IeQEfGftO8NksHeYw" name="Redundancy"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_e51B4IeQEfGftO8NksHeYw" name="Redundancy">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_y5ywAIqgEfGVwI18gr1osA">
+          <body>totalSources: 1&#xD;
+minimumVotes: 1</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_1SfswIqgEfGVwI18gr1osA">
+          <body>totalSources: 3&#xD;
+minimumVotes: 2</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Y6BU8IqYEfGVwI18gr1osA" name="Voting System No Redundancy">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_8A_scIqdEfGVwI18gr1osA" name="totalSources">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_k5tgcIqgEfGVwI18gr1osA" name="LiteralInteger1" value="3"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_q9N7AIqgEfGVwI18gr1osA" name="minimumVotes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_up19wIqgEfGVwI18gr1osA" name="LiteralInteger1" value="2"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_aMrPoIqYEfGVwI18gr1osA" name="Voting System Redundancy">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XQHbEIqcEfGVwI18gr1osA" name="totalSources">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_dhEbwIqcEfGVwI18gr1osA" name="LiteralInteger1" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_h6ePgIqdEfGVwI18gr1osA" name="minimumVotes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oVB4IIqdEfGVwI18gr1osA" name="LiteralInteger1" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_it59IIrVEfGVwI18gr1osA" name="No Redundancy">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWBhkIryEfGVwI18gr1osA" name="Camera" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWKrgIryEfGVwI18gr1osA" name="Authentication System" type="_L8hS4HZDEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWMgsIryEfGVwI18gr1osA" name="Voting System" type="_SCymMHZGEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ZWOV4IryEfGVwI18gr1osA" name="FusionProcessorShared" type="_dW7M4HZGEfG_hu9eze5UeQ" aggregation="composite"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_no-0YIrzEfGVwI18gr1osA" informationSource="_ZWBhkIryEfGVwI18gr1osA" informationTarget="_ZWKrgIryEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_sSlcwIrzEfGVwI18gr1osA" informationSource="_ZWKrgIryEfGVwI18gr1osA _it59IIrVEfGVwI18gr1osA" informationTarget="_ZWMgsIryEfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_xOTI0IrzEfGVwI18gr1osA" informationSource="_ZWMgsIryEfGVwI18gr1osA" informationTarget="_ZWOV4IryEfGVwI18gr1osA"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_dtqJsIeQEfGftO8NksHeYw" name="Shared Resources">
         <ownedComment xmi:type="uml:Comment" xmi:id="_l18DIIe2EfGftO8NksHeYw">
           <body>Shared Constraint evaluates to False, due to &#xD;
@@ -365,7 +403,7 @@ Cross-Layer Composition fails. &#xD;
 </body>
           </ownedComment>
           <ownedComment xmi:type="uml:Comment" xmi:id="_qaIJYIoOEfGVwI18gr1osA">
-            <body>Authentication_System.cryptoOverhead = 15ms&#xD;
+            <body>FusionProcessorShared.cryptoOverhead = 15ms&#xD;
 FusionProcessorShared.processingTime = 40ms</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_JIUZYIe8EfGVwI18gr1osA" name="Camera" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
@@ -387,8 +425,8 @@ Cross-Layer Composition holds. &#xD;
 </body>
           </ownedComment>
           <ownedComment xmi:type="uml:Comment" xmi:id="_S-VX4IoPEfGVwI18gr1osA">
-            <body>Authentication_System.cryptoOverhead = 15ms&#xD;
-FusionProcessorShared.processingTime = 40ms</body>
+            <body>FusionProcessorDedicated.cryptoOverhead = 0ms&#xD;
+FusionProcessorDedicated.processingTime = 40ms</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_-gmpEIoGEfGVwI18gr1osA" name="Camera" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_-gmpEYoGEfGVwI18gr1osA" name="LiDAR" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
@@ -485,4 +523,7 @@ FusionProcessorShared.processingTime = 40ms</body>
   <Blocks:Block xmi:id="_kTUrwIe0EfGftO8NksHeYw" base_Class="_kTQaUIe0EfGftO8NksHeYw"/>
   <Blocks:Block xmi:id="_XtVCUIe5EfGftO8NksHeYw" base_Class="_XtR_AIe5EfGftO8NksHeYw"/>
   <Blocks:Block xmi:id="_dc77MIoDEfGVwI18gr1osA" base_Class="_dc434IoDEfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_Y6Ke4IqYEfGVwI18gr1osA" base_Class="_Y6BU8IqYEfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_aNBN4IqYEfGVwI18gr1osA" base_Class="_aMrPoIqYEfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_iuFjUIrVEfGVwI18gr1osA" base_Class="_it59IIrVEfGVwI18gr1osA"/>
 </xmi:XMI>
