@@ -1154,7 +1154,7 @@
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_rm11o26uEfGHXeUJchcvDQ" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_rm11pG6uEfGHXeUJchcvDQ"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_rm11pW6uEfGHXeUJchcvDQ" diagramKindId="org.eclipse.papyrus.sysml16.diagram.activity">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_rm11pW6uEfGHXeUJchcvDQ" diagramKindId="org.eclipse.papyrus.uml.diagram.activity">
       <owner xmi:type="uml:Package" href="BaseModelProject.uml#_3JeX8GgvEfGmR83NCWlxrA"/>
     </styles>
     <element xmi:type="uml:Activity" href="BaseModelProject.uml#_qOosgG6uEfGHXeUJchcvDQ"/>
@@ -2776,7 +2776,7 @@
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_ZEtpYYqVEfGVwI18gr1osA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_ZEtpYoqVEfGVwI18gr1osA"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_ZEtpY4qVEfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.sysml16.diagram.blockdefinition">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_ZEtpY4qVEfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
       <owner xmi:type="uml:Package" href="BaseModelProject.uml#_e51B4IeQEfGftO8NksHeYw"/>
     </styles>
     <element xmi:type="uml:Package" href="BaseModelProject.uml#_e51B4IeQEfGftO8NksHeYw"/>
@@ -2887,7 +2887,7 @@
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_lmCn4YrVEfGVwI18gr1osA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_lmCn4orVEfGVwI18gr1osA"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_lmCn44rVEfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.sysml16.diagram.internalblock">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_lmCn44rVEfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.uml.diagram.compositeStructure.root.structuredClassifier">
       <owner xmi:type="uml:Package" href="BaseModelProject.uml#_e51B4IeQEfGftO8NksHeYw"/>
     </styles>
     <element xmi:type="uml:Class" href="BaseModelProject.uml#_it59IIrVEfGVwI18gr1osA"/>
@@ -3060,7 +3060,7 @@
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_2yl4kYuHEfGVwI18gr1osA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_2yl4kouHEfGVwI18gr1osA"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_2yl4k4uHEfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.sysml16.diagram.internalblock">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_2yl4k4uHEfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.uml.diagram.compositeStructure.root.structuredClassifier">
       <owner xmi:type="uml:Package" href="BaseModelProject.uml#_e51B4IeQEfGftO8NksHeYw"/>
     </styles>
     <element xmi:type="uml:Class" href="BaseModelProject.uml#_1agrUIuHEfGVwI18gr1osA"/>
@@ -3220,7 +3220,7 @@
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_xUwSsYuOEfGVwI18gr1osA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_xUwSsouOEfGVwI18gr1osA"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_xUwSs4uOEfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.sysml16.diagram.blockdefinition">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_xUwSs4uOEfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
       <owner xmi:type="uml:Package" href="BaseModelProject.uml#_OebmcIeQEfGftO8NksHeYw"/>
     </styles>
     <element xmi:type="uml:Package" href="BaseModelProject.uml#_OebmcIeQEfGftO8NksHeYw"/>
@@ -3335,7 +3335,7 @@
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_OE3LwYu1EfGVwI18gr1osA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_OE3Lwou1EfGVwI18gr1osA"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_OE3Lw4u1EfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.sysml16.diagram.internalblock">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_OE3Lw4u1EfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.uml.diagram.compositeStructure.root.structuredClassifier">
       <owner xmi:type="uml:Package" href="BaseModelProject.uml#_OebmcIeQEfGftO8NksHeYw"/>
     </styles>
     <element xmi:type="uml:Class" href="BaseModelProject.uml#_M2uksIu1EfGVwI18gr1osA"/>
@@ -3509,7 +3509,7 @@
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_UGjBYYu1EfGVwI18gr1osA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_UGjBYou1EfGVwI18gr1osA"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_UGjBY4u1EfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.sysml16.diagram.internalblock">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_UGjBY4u1EfGVwI18gr1osA" diagramKindId="org.eclipse.papyrus.uml.diagram.compositeStructure.root.structuredClassifier">
       <owner xmi:type="uml:Package" href="BaseModelProject.uml#_OebmcIeQEfGftO8NksHeYw"/>
     </styles>
     <element xmi:type="uml:Class" href="BaseModelProject.uml#_TNFp0Iu1EfGVwI18gr1osA"/>
