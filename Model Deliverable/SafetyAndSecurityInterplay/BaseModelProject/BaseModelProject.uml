@@ -309,6 +309,42 @@ and self.latency &lt;= 30&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_M2uksIu1EfGVwI18gr1osA" name="Layered">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_-0roAIw9EfGVwI18gr1osA">
+            <body>Same functionality as a non-layered architectural system, but exposed as multiple separate components that connect with each other, each with interfaces and OCL &#xD;
+constraints to define safety and security properties with. The combination of these features make compositional verification possible</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_0HAPQIw7EfGVwI18gr1osA" name="LiDAR" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_0HFu0Iw7EfGVwI18gr1osA" name="Radar" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_0HKAQIw7EfGVwI18gr1osA" name="FusionProcessorDedicated" type="_dW7M4HZGEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_0HNDkIw7EfGVwI18gr1osA" name="Voting System" type="_SCymMHZGEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_0HQG4Iw7EfGVwI18gr1osA" name="Authentication System" type="_L8hS4HZDEfG_hu9eze5UeQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_0HW0kIw7EfGVwI18gr1osA" name="Camera" type="_cgDMEHZCEfG_hu9eze5UeQ" aggregation="composite"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_P7xqEIu1EfGVwI18gr1osA" name="Block4"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TNFp0Iu1EfGVwI18gr1osA" name="Non Layered Architecture">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_LvVXAIwyEfGVwI18gr1osA">
+            <body>Only one property (totalProcessingTime=55ms) is visible. Although the functionality doesn't &#xD;
+change from a layered architectural system, there are no internal component boundaries to &#xD;
+attach a security property (such as authentication) or a safety property (such as safe fusion &#xD;
+timing) to. There are also no components to apply compositional verification to and evaluate &#xD;
+whether they make or break specific timings of other components.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_cmI8EIwyEfGVwI18gr1osA" name="AV " aggregation="composite"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vOCzIIu1EfGVwI18gr1osA" name="Block6">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_Ec26QIu2EfGVwI18gr1osA" name="Physical Environment" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_No1hoIu2EfGVwI18gr1osA" name="Obstacle Position" aggregation="composite"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_eHxt8IwyEfGVwI18gr1osA" name="Block7">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_hAubkIwzEfGVwI18gr1osA" name="Physical Environment" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_ktfBMIwzEfGVwI18gr1osA" name="Obstacle Position" aggregation="composite"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Gay6QIw9EfGVwI18gr1osA" informationSource="_0HW0kIw7EfGVwI18gr1osA" informationTarget="_0HQG4Iw7EfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Is44sIw9EfGVwI18gr1osA" informationSource="_0HFu0Iw7EfGVwI18gr1osA" informationTarget="_0HQG4Iw7EfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_KoBvsIw9EfGVwI18gr1osA" informationSource="_0HAPQIw7EfGVwI18gr1osA" informationTarget="_0HQG4Iw7EfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_ad-UsIw9EfGVwI18gr1osA" informationSource="_0HQG4Iw7EfGVwI18gr1osA" informationTarget="_0HNDkIw7EfGVwI18gr1osA"/>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_c9C_MIw9EfGVwI18gr1osA" informationSource="_0HNDkIw7EfGVwI18gr1osA" informationTarget="_0HKAQIw7EfGVwI18gr1osA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_e51B4IeQEfGftO8NksHeYw" name="Redundancy">
         <ownedComment xmi:type="uml:Comment" xmi:id="_y5ywAIqgEfGVwI18gr1osA">
@@ -584,4 +620,9 @@ FusionProcessorDedicated.processingTime = 40ms</body>
   <Blocks:Block xmi:id="_iuFjUIrVEfGVwI18gr1osA" base_Class="_it59IIrVEfGVwI18gr1osA"/>
   <Blocks:Block xmi:id="_1atfoIuHEfGVwI18gr1osA" base_Class="_1agrUIuHEfGVwI18gr1osA"/>
   <Blocks:Block xmi:id="_Rc1lQIuWEfGVwI18gr1osA" base_Class="_RcveoIuWEfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_M2zdMIu1EfGVwI18gr1osA" base_Class="_M2uksIu1EfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_P74-0Iu1EfGVwI18gr1osA" base_Class="_P7xqEIu1EfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_TNLwcIu1EfGVwI18gr1osA" base_Class="_TNFp0Iu1EfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_vOF2cIu1EfGVwI18gr1osA" base_Class="_vOCzIIu1EfGVwI18gr1osA"/>
+  <Blocks:Block xmi:id="_eH3NgIwyEfGVwI18gr1osA" base_Class="_eHxt8IwyEfGVwI18gr1osA"/>
 </xmi:XMI>
