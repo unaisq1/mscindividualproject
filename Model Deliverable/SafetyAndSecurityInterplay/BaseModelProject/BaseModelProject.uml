@@ -284,7 +284,6 @@ and self.latency &lt;= 30&#xD;
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_DaY2YIJPEfGa8cDegiFfVw" name="IAuthenticateData">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_SFgo4IPBEfGa8cDegiFfVw" name="authenticateData"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_N5P8QIYQEfGTtd6yczNHGg" name="Operation2"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_Kwp5UIJPEfGa8cDegiFfVw" name="IVoteData">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_jrTd8IVNEfGa8cDegiFfVw" name="voteData"/>

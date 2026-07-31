@@ -2,6 +2,7 @@ package com.safetyandsecurityinterplay.component;
 
 public class Sensor {
 
+    //Fixed Sensor Types
     public enum SensorTypes
     {
         Camera,
@@ -9,16 +10,19 @@ public class Sensor {
         Radar
     }
 
+    //Attributes/Variables
     private String sensorName;
     private String sensorType;
     private int range;
     private int latencyInMilliseconds;
     private boolean encryptionEnabled;
 
-    public Sensor (String sn, String st, int r, int l, boolean ee)
+    //Constructor
+    public Sensor(String sn, String st, int r, int l, boolean ee)
     {
         sensorName = sn;
         
+        //Ensures only the recognised sensor types can be applied
         for (SensorTypes s : SensorTypes.values()) 
         {
             if (st.equals(s.toString()))
@@ -36,6 +40,7 @@ public class Sensor {
         encryptionEnabled = ee;
     }
 
+    //Setters
     public void setSensorName(String sn)
     {
         sensorName = sn;
@@ -71,6 +76,7 @@ public class Sensor {
         encryptionEnabled = ee;
     }
 
+    //Getters
     public String getSensorName()
     {
         return sensorName;
