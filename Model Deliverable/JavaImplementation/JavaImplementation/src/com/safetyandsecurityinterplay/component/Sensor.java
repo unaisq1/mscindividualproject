@@ -1,6 +1,9 @@
 package com.safetyandsecurityinterplay.component;
 
-public class Sensor {
+import com.safetyandsecurityinterplay.component.interfaces.IGatherData;
+import com.safetyandsecurityinterplay.component.interfaces.IRawSensorData;
+
+public class Sensor implements IGatherData{
 
     //Fixed Sensor Types
     public enum SensorTypes
@@ -39,6 +42,48 @@ public class Sensor {
 
         counter++; //Increments by 1 each time an object is instantiated
     }
+
+    //Behaviour
+    
+    //OCL: Sensor Constraint 1 (Security Property): self.encryptionEnabled = true and self.latency <= 30
+    public boolean satisfiesSensorConstraint1() 
+    {
+        return encryptionEnabled && latencyInMilliseconds <= 30;
+        //Checks if a sensor has encryption capabilities enabled and if latency is equal or lower than 30 milliseconds
+    }
+
+    @Override
+    public IRawSensorData collectData() 
+    {
+        double[] simulatedReading = { 42.0 }; //A placeholder for real sensor-derived data
+        return new RawSensorData(simulatedReading, System.currentTimeMillis());
+    }
+
+    private static final class RawSensorData implements IRawSensorData 
+    {
+        private final double[] values;
+        private final long timestamp;
+
+        RawSensorData(double[] values, long timestamp) 
+        {
+            this.values = values;
+            this.timestamp = timestamp;
+        }
+
+        @Override
+        public double[] getRawValues() 
+        {
+            return values;
+        }
+
+        @Override
+        public long getTimestampInMilliseconds() 
+        {
+            return timestamp;
+        }
+    }
+
+    
 
     //Setters
     public void setSensorType(String st)

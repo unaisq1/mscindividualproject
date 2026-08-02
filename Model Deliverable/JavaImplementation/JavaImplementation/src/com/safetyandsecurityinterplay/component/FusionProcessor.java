@@ -1,5 +1,8 @@
 package com.safetyandsecurityinterplay.component;
 
+import com.safetyandsecurityinterplay.component.interfaces.IFuseData;
+import com.safetyandsecurityinterplay.component.interfaces.IVotedData;
+
 public class FusionProcessor {
 
     //Attributes/Variables
@@ -15,6 +18,47 @@ public class FusionProcessor {
         cpuAllocation = ca;
         cryptoOverhead = co;
         processingTimeInMilliseconds = p;
+    }
+
+    //Behaviour
+    //OCL: Fusion Constraint 1: self.cryptoOverhead + self.processingTime <= 50
+    public boolean satisfiesFusionConstraint1() 
+    {
+        return getTotalLatencyMs() <= 50;
+    }
+
+    public int getTotalLatencyMs() 
+    {
+        return cryptoOverhead + processingTimeInMilliseconds;
+    }
+
+    public IFuseData fuse(IVotedData voted) 
+    {
+        return new FusedData(voted.getRepresentativeValues(), voted.hasSufficientValidSources());
+    }
+
+    private static final class FusedData implements IFuseData 
+    {
+        private final double[] fusedPosition;
+        private final boolean trustworthy;
+
+        FusedData(double[] fusedPosition, boolean trustworthy) 
+        {
+            this.fusedPosition = fusedPosition;
+            this.trustworthy = trustworthy;
+        }
+
+        @Override
+        public double[] getFusedPosition() 
+        {
+            return fusedPosition;
+        }
+
+        @Override
+        public boolean isTrustworthy() 
+        {
+            return trustworthy;
+        }
     }
 
     //Setters
