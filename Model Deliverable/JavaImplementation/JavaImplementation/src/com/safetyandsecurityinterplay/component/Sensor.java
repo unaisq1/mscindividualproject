@@ -11,17 +11,14 @@ public class Sensor {
     }
 
     //Attributes/Variables
-    private String sensorName;
     private String sensorType;
     private int range;
     private int latencyInMilliseconds;
     private boolean encryptionEnabled;
 
     //Constructor
-    public Sensor(String sn, String st, int r, int l, boolean ee)
+    public Sensor(String st, int r, int l, boolean ee)
     {
-        sensorName = sn;
-        
         //Ensures only the recognised sensor types can be applied
         for (SensorTypes s : SensorTypes.values()) 
         {
@@ -41,11 +38,6 @@ public class Sensor {
     }
 
     //Setters
-    public void setSensorName(String sn)
-    {
-        sensorName = sn;
-    }
-
     public void setSensorType(String st)
     {
         for (SensorTypes s : SensorTypes.values()) 
@@ -77,11 +69,6 @@ public class Sensor {
     }
 
     //Getters
-    public String getSensorName()
-    {
-        return sensorName;
-    }
-
     public String getSensorType()
     {
         return sensorType;
