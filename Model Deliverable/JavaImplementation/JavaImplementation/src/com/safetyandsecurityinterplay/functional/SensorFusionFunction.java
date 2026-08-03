@@ -1,7 +1,12 @@
 package com.safetyandsecurityinterplay.functional;
 
+import java.util.List;
+
 import com.safetyandsecurityinterplay.component.FusionProcessor;
 import com.safetyandsecurityinterplay.component.VotingSystem;
+import com.safetyandsecurityinterplay.component.interfaces.IAuthenticatedSensorData;
+import com.safetyandsecurityinterplay.component.interfaces.IFuseData;
+import com.safetyandsecurityinterplay.component.interfaces.IVotedData;
 
 public class SensorFusionFunction {
 
@@ -25,6 +30,12 @@ public class SensorFusionFunction {
     public boolean satisfiesSFF1() 
     {
         return !inputValidationRequired || fusionLatencyInMilliseconds <= 20;
+    }
+
+    public IFuseData fuse(List<IAuthenticatedSensorData> authenticatedInputs) 
+    {
+        IVotedData voted = votingSystem.voteData(authenticatedInputs);
+        return fusionProcessor.fuse(voted);
     }
 
     //Setters

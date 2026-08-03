@@ -23,19 +23,17 @@ public class AuthenticationSystem implements IAuthenticateData{
     @Override
     public IAuthenticatedSensorData authenticateData(IRawSensorData raw) 
     {
-        return new AuthenticatedData(raw.getRawValues(), valid, raw.getTimestampMillis());
+        return new AuthenticatedData(raw.getRawValues(), raw.getTimestampInMilliseconds());
     }
 
     private static final class AuthenticatedData implements IAuthenticatedSensorData 
     {
         private final double[] values;
-        private final boolean authentic;
         private final long timestamp;
 
-        AuthenticatedData(double[] values, boolean authentic, long timestamp) 
+        AuthenticatedData(double[] values, long timestamp) 
         {
             this.values = values;
-            this.authentic = authentic;
             this.timestamp = timestamp;
         }
 
@@ -43,12 +41,6 @@ public class AuthenticationSystem implements IAuthenticateData{
         public double[] getValues() 
         {
             return values;
-        }
-
-        @Override
-        public boolean isAuthentic() 
-        {
-            return authentic;
         }
 
         @Override
