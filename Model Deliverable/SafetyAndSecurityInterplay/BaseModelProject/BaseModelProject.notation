@@ -2498,13 +2498,13 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Y6YhU4qYEfGVwI18gr1osA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y6YhVIqYEfGVwI18gr1osA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_Y6YhVYqYEfGVwI18gr1osA" type="Class_OperationCompartment">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Y6YhVYqYEfGVwI18gr1osA" visible="false" type="Class_OperationCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_Y6YhVoqYEfGVwI18gr1osA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Y6YhV4qYEfGVwI18gr1osA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Y6YhWIqYEfGVwI18gr1osA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y6YhWYqYEfGVwI18gr1osA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_Y6YhWoqYEfGVwI18gr1osA" type="Class_NestedClassifierCompartment">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Y6YhWoqYEfGVwI18gr1osA" visible="false" type="Class_NestedClassifierCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_Y6YhW4qYEfGVwI18gr1osA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Y6YhXIqYEfGVwI18gr1osA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Y6YhXYqYEfGVwI18gr1osA"/>
@@ -2530,7 +2530,7 @@
       <children xmi:type="notation:Compartment" xmi:id="_Y6pnFIqYEfGVwI18gr1osA" type="Flow Properties"/>
       <children xmi:type="notation:Compartment" xmi:id="_Y6pnFYqYEfGVwI18gr1osA" type="Parameters"/>
       <element xmi:type="uml:Class" href="BaseModelProject.uml#_Y6BU8IqYEfGVwI18gr1osA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y6WsIYqYEfGVwI18gr1osA" x="260" y="280"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y6WsIYqYEfGVwI18gr1osA" x="260" y="300" height="81"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_aM__wIqYEfGVwI18gr1osA" type="Class_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_aNAm0IqYEfGVwI18gr1osA" type="Class_NameLabel"/>
@@ -2551,13 +2551,13 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_aNAm1oqYEfGVwI18gr1osA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aNAm14qYEfGVwI18gr1osA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_aNAm2IqYEfGVwI18gr1osA" type="Class_OperationCompartment">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_aNAm2IqYEfGVwI18gr1osA" visible="false" type="Class_OperationCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_aNAm2YqYEfGVwI18gr1osA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_aNAm2oqYEfGVwI18gr1osA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_aNAm24qYEfGVwI18gr1osA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aNAm3IqYEfGVwI18gr1osA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_aNAm3YqYEfGVwI18gr1osA" type="Class_NestedClassifierCompartment">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_aNAm3YqYEfGVwI18gr1osA" visible="false" type="Class_NestedClassifierCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_aNAm3oqYEfGVwI18gr1osA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_aNAm34qYEfGVwI18gr1osA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_aNAm4IqYEfGVwI18gr1osA"/>
@@ -2583,7 +2583,7 @@
       <children xmi:type="notation:Compartment" xmi:id="_aNKX1oqYEfGVwI18gr1osA" type="Flow Properties"/>
       <children xmi:type="notation:Compartment" xmi:id="_aNKX14qYEfGVwI18gr1osA" type="Parameters"/>
       <element xmi:type="uml:Class" href="BaseModelProject.uml#_aMrPoIqYEfGVwI18gr1osA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aM__wYqYEfGVwI18gr1osA" x="260" y="100"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aM__wYqYEfGVwI18gr1osA" x="260" y="120" height="81"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_y50lMIqgEfGVwI18gr1osA" type="Comment_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_y50lMoqgEfGVwI18gr1osA" type="Comment_BodyLabel"/>
@@ -3008,13 +3008,13 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Rc9hEouWEfGVwI18gr1osA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rc9hE4uWEfGVwI18gr1osA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_Rc9hFIuWEfGVwI18gr1osA" type="Class_OperationCompartment">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Rc9hFIuWEfGVwI18gr1osA" visible="false" type="Class_OperationCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_Rc9hFYuWEfGVwI18gr1osA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Rc9hFouWEfGVwI18gr1osA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Rc9hF4uWEfGVwI18gr1osA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rc9hGIuWEfGVwI18gr1osA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_Rc9hGYuWEfGVwI18gr1osA" type="Class_NestedClassifierCompartment">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Rc9hGYuWEfGVwI18gr1osA" visible="false" type="Class_NestedClassifierCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_Rc9hGouWEfGVwI18gr1osA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Rc9hG4uWEfGVwI18gr1osA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Rc9hHIuWEfGVwI18gr1osA"/>
@@ -3040,7 +3040,7 @@
       <children xmi:type="notation:Compartment" xmi:id="_RdMKkIuWEfGVwI18gr1osA" type="Flow Properties"/>
       <children xmi:type="notation:Compartment" xmi:id="_RdMKkYuWEfGVwI18gr1osA" type="Parameters"/>
       <element xmi:type="uml:Class" href="BaseModelProject.uml#_RcveoIuWEfGVwI18gr1osA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rc8S8YuWEfGVwI18gr1osA" x="340" y="120"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rc8S8YuWEfGVwI18gr1osA" x="340" y="120" height="101"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_rIoUYIueEfGVwI18gr1osA" type="Comment_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_rIo7cIueEfGVwI18gr1osA" type="Comment_BodyLabel"/>
