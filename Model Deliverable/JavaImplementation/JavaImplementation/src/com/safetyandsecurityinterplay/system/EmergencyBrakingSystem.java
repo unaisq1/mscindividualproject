@@ -43,7 +43,45 @@ public class EmergencyBrakingSystem {
     }
 
     //Setters
+    public void setBrakeResponseTimeInMilliseconds(int b)
+    {
+        brakeResponseTimeInMilliseconds = b;
+    }
+
+    public void setObstacleDetectionRangeInMetres(int o)
+    {
+        obstacleDetectionRangeInMetres = o;
+    }
+
+    public void setSystemAvailability(double sa)
+    {
+        systemAvailability = sa;  
+    }
+
+    public void setDetectionFunction(ObstacleDetectionFunction df)
+    {
+        detectionFunction = df;
+    }
 
     //Getters
-    
+    public int getBrakeResponseTimeInMilliseconds()
+    {
+        return brakeResponseTimeInMilliseconds;
+    }
+
+    public int setObstacleDetectionRangeInMetres()
+    {
+        return obstacleDetectionRangeInMetres;
+    }
+
+    public double setSystemAvailability()
+    {
+        return systemAvailability;  
+    }
+
+    public ObstacleDetectionFunction setDetectionFunction()
+    {
+        return detectionFunction;
+    }
+
 }
