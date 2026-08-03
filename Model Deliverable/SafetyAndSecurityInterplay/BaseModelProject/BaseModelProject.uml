@@ -415,10 +415,9 @@ time taken, which is more than the limit provided &#xD;
 </body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_BGU1sIe4EfGftO8NksHeYw">
-          <body>Dedicated Constraint evaluates to False, due to &#xD;
-&quot;cryptoOverhead&quot; &#xD;
-and &quot;processingTime&quot; both contributing to total &#xD;
-time taken, which is more than the limit provided &#xD;
+          <body>Dedicated Constraint evaluates to True, where only &#xD;
+&quot;processingTime&quot; contributes to total &#xD;
+time taken, which is less than the limit provided &#xD;
 (50ms)&#xD;
 </body>
         </ownedComment>
