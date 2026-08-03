@@ -126,32 +126,6 @@ implies self.fusionLatency &lt;= 20</body>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Ua-nSm3PEfG-5dxW-sG0PQ" name="LiteralInteger1" value="20"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_AqtvEG5OEfG-5dxW-sG0PQ" name="Braking Choice Function">
-        <ownedRule xmi:type="uml:Constraint" xmi:id="_NUY6cG5QEfG-5dxW-sG0PQ" name="BCF Constraint 1">
-          <specification xmi:type="uml:OpaqueExpression" xmi:id="_NUaIkG5QEfG-5dxW-sG0PQ" name="constraintSpec">
-            <language>OCL</language>
-            <body>self.choiceLatency &lt;= 10</body>
-          </specification>
-        </ownedRule>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_G1EjEG5PEfG-5dxW-sG0PQ" name="choiceLatency">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_MBSJQG5PEfG-5dxW-sG0PQ" name="LiteralInteger1" value="10"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_B7lPIG5QEfG-5dxW-sG0PQ" name="choiceIntegrityCheck">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_G-AnMG5QEfG-5dxW-sG0PQ" name="LiteralBoolean1" value="true"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_1dhroG5SEfG-5dxW-sG0PQ" name="Actuation Function">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_La3ssG5TEfG-5dxW-sG0PQ" name="actuationLatency">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_PeHfsG5TEfG-5dxW-sG0PQ" name="LiteralInteger1" value="30"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_RME2UG5TEfG-5dxW-sG0PQ" name="overrideProtection">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_UuwS4G5TEfG-5dxW-sG0PQ" name="LiteralBoolean1" value="true"/>
-        </ownedAttribute>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="__JQfMG5UEfG-5dxW-sG0PQ" name="link" memberEnd="__JSUYm5UEfG-5dxW-sG0PQ __JTigm5UEfG-5dxW-sG0PQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__JSUYG5UEfG-5dxW-sG0PQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__JSUYW5UEfG-5dxW-sG0PQ" key="nature" value="UML_Nature"/>
@@ -604,8 +578,6 @@ FusionProcessorDedicated.processingTime = 40ms</body>
   <Blocks:Block xmi:id="_W7ZRoGrGEfGXLJvyXHhXzw" base_Class="_W7WOUGrGEfGXLJvyXHhXzw"/>
   <Blocks:Block xmi:id="_1KV_QGtEEfG-5dxW-sG0PQ" base_Class="_1KLnMGtEEfG-5dxW-sG0PQ"/>
   <Blocks:Block xmi:id="_UbEt4G3PEfG-5dxW-sG0PQ" base_Class="_Ua-nQG3PEfG-5dxW-sG0PQ"/>
-  <Blocks:Block xmi:id="_AqxZcG5OEfG-5dxW-sG0PQ" base_Class="_AqtvEG5OEfG-5dxW-sG0PQ"/>
-  <Blocks:Block xmi:id="_1dku8G5SEfG-5dxW-sG0PQ" base_Class="_1dhroG5SEfG-5dxW-sG0PQ"/>
   <component:hardware xmi:id="_Lj6c8HolEfG_hu9eze5UeQ" base_Class="_cgDMEHZCEfG_hu9eze5UeQ"/>
   <component:hardware xmi:id="_zYbOUH7PEfGVnpeYmAPPiA" base_Class="_dW7M4HZGEfG_hu9eze5UeQ"/>
   <component:software xmi:id="_2s2McH7PEfGVnpeYmAPPiA" base_Class="_L8hS4HZDEfG_hu9eze5UeQ"/>
