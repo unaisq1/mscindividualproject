@@ -4,14 +4,13 @@ import com.safetyandsecurityinterplay.component.AuthenticationSystem;
 import com.safetyandsecurityinterplay.component.Sensor;
 import com.safetyandsecurityinterplay.component.interfaces.IAuthenticatedSensorData;
 import com.safetyandsecurityinterplay.component.interfaces.IFuseData;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ObstacleDetectionFunction {
     //Attributes/Variables
     private List<Sensor> sensors;
-    private AuthenticationSystem authSystem;
+    private AuthenticationSystem authenticationSystem;
     private SensorFusionFunction sensorFusionFunction;
     private double detectionAccuracy;
     private int processingDeadlineInMilliseconds;
@@ -20,7 +19,7 @@ public class ObstacleDetectionFunction {
     public ObstacleDetectionFunction(List<Sensor> s, AuthenticationSystem as, SensorFusionFunction sff, double da, int p)
     {
         sensors = s;
-        authSystem = as;
+        authenticationSystem = as;
         sensorFusionFunction = sff;
         detectionAccuracy= da;
         processingDeadlineInMilliseconds = p;   
@@ -49,7 +48,7 @@ public class ObstacleDetectionFunction {
     {
         List<IAuthenticatedSensorData> authenticatedReadings = sensors.stream()
                 .map(Sensor::collectData)
-                .map(authSystem::authenticateData)
+                .map(authenticationSystem::authenticateData)
                 .collect(Collectors.toList());
         return sensorFusionFunction.fuse(authenticatedReadings);
     }
@@ -67,13 +66,57 @@ public class ObstacleDetectionFunction {
         return odfOk && sffOk && fusionOk && sensorsOk && dataTrustworthy;
     }
 
-    
-
     //Setters
+    public void setSensors(List<Sensor> s)
+    {
+        sensors = s;
+    }
 
+    public void setAuthenticationSystem(AuthenticationSystem as)
+    {
+        authenticationSystem = as;
+    }
+
+    public void setSensorFusionFunction(SensorFusionFunction sff) 
+    {
+        sensorFusionFunction = sff;
+    }
+
+    public void setDetectionAccuracy(double da)
+    {
+        detectionAccuracy= da;
+    }
+
+    public void setProcessingTimeInMilliseconds(int p)
+    {
+        processingDeadlineInMilliseconds = p; 
+    }        
+        
     //Getters
+    public List<Sensor> getSensors()
+    {
+        return sensors;
+    }
+
+    public AuthenticationSystem getAuthenticationSystem()
+    {
+        return authenticationSystem;
+    }
+
     public SensorFusionFunction getSensorFusionFunction() 
     {
         return sensorFusionFunction;
     }
+
+    public double getDetectionAccuracy()
+    {
+        return detectionAccuracy;
+    }
+
+    public int getProcessingTimeInMilliseconds()
+    {
+        return processingDeadlineInMilliseconds; 
+    }        
+
+    
 }
