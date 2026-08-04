@@ -22,7 +22,7 @@ public class VotingSystem implements IVoteData{
     @Override
     public IVotedData voteData(List<IAuthenticatedSensorData> inputs) 
     {
-        long validCount = inputs.stream().filter(IAuthenticatedSensorData::isAuthentic).count();
+        long validCount = inputs.stream().count();
         boolean sufficient = validCount >= minimumVotes;
         double[] representative = inputs.isEmpty() ? new double[]{ 0.0 } : inputs.get(0).getValues();
         return new VotedData(representative, sufficient, (int) validCount);

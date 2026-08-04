@@ -1,12 +1,11 @@
 package com.safetyandsecurityinterplay.functional;
 
-import java.util.List;
-
 import com.safetyandsecurityinterplay.component.FusionProcessor;
 import com.safetyandsecurityinterplay.component.VotingSystem;
 import com.safetyandsecurityinterplay.component.interfaces.IAuthenticatedSensorData;
 import com.safetyandsecurityinterplay.component.interfaces.IFuseData;
 import com.safetyandsecurityinterplay.component.interfaces.IVotedData;
+import java.util.List;
 
 public class SensorFusionFunction {
 

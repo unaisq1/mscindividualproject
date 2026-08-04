@@ -69,17 +69,17 @@ public class EmergencyBrakingSystem {
         return brakeResponseTimeInMilliseconds;
     }
 
-    public int setObstacleDetectionRangeInMetres()
+    public int getObstacleDetectionRangeInMetres()
     {
         return obstacleDetectionRangeInMetres;
     }
 
-    public double setSystemAvailability()
+    public double getSystemAvailability()
     {
         return systemAvailability;  
     }
 
-    public ObstacleDetectionFunction setDetectionFunction()
+    public ObstacleDetectionFunction getDetectionFunction()
     {
         return detectionFunction;
     }
