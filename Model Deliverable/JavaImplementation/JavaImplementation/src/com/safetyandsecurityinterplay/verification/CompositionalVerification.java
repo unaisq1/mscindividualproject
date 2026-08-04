@@ -7,23 +7,25 @@ import com.safetyandsecurityinterplay.functional.SensorFusionFunction;
 import com.safetyandsecurityinterplay.system.EmergencyBrakingSystem;
 
 public class CompositionalVerification {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         report("Variant A - Single sensor, Shared processor",
-                AVComponentFactory.buildVariantA_SharedProcessor());
+                AVComponentFactory.buildSharedProcessorVariant());
 
         report("Variant B - Triple redundancy, Shared processor",
-                AVComponentFactory.buildVariantB_RedundantShared());
+                AVComponentFactory.buildRedundancySharedProcessorVariant());
 
         report("Variant C - Triple redundancy, Dedicated crypto hardware",
-                AVComponentFactory.buildVariantC_RedundantDedicated());
+                AVComponentFactory.buildRedundancyDedicatedProcessorVariant());
     }
 
-    private static void report(String variantName, EmergencyBrakingSystem system) {
+    private static void report(String variantName, EmergencyBrakingSystem system) 
+    {
         ObstacleDetectionFunction odf = system.getDetectionFunction();
         SensorFusionFunction sff = odf.getSensorFusionFunction();
         FusionProcessor fusion = sff.getFusionProcessor();
 
-        System.out.println("=== " + variantName + " ===");
+        System.out.println(variantName);
         System.out.println("System Layer: EBS1 response time <=100ms:            " + system.satisfiesEBS1());
         System.out.println("System Layer: EBS2 detection range >=50m:            " + system.satisfiesEBS2());
         System.out.println("System Layer: EBS3 availability >=0.99:              " + system.satisfiesEBS3());
