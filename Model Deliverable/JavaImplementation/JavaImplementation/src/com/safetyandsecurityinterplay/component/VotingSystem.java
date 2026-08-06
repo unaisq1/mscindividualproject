@@ -28,7 +28,7 @@ public class VotingSystem implements IVoteData{
         return new VotedData(representative, sufficient, (int) validCount);
     }
 
-    private static final class VotedData implements IVotedData 
+    private static final class VotedData implements IVotedData //Provides voted data that is sufficient given total sources and the number of sources
     {
         private final double[] representativeValues;
         private final boolean sufficientSources;

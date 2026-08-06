@@ -53,10 +53,9 @@ public class ObstacleDetectionFunction {
         return sensorFusionFunction.fuse(authenticatedReadings);
     }
 
-    //THE CENTRAL RESEARCH QUESTION, IN CODE:
-    //Does component-layer security (authentication + voting) compose to
-    //guarantee functional-layer safety (timing deadlines + sufficient sources)?
 
+    //Does component-layer security (such as authentication and voting) compose to
+    //guarantee functional-layer safety (timing deadlines and sufficient sources)?
     public boolean crossLayerCompositionHolds() {
         boolean odfOk = satisfiesODF1() && satisfiesODF2();
         boolean sffOk = sensorFusionFunction.satisfiesSFF1();

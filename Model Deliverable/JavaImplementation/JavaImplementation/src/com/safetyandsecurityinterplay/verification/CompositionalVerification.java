@@ -9,17 +9,17 @@ import com.safetyandsecurityinterplay.system.EmergencyBrakingSystem;
 public class CompositionalVerification {
     public static void main(String[] args) 
     {
-        report("Variant A - Single sensor, Shared processor",
+        generateReport("Variant A - Single sensor, Shared processor",
                 AVComponentFactory.buildSharedProcessorVariant());
 
-        report("Variant B - Triple redundancy, Shared processor",
+        generateReport("Variant B - Triple redundancy, Shared processor",
                 AVComponentFactory.buildRedundancySharedProcessorVariant());
 
-        report("Variant C - Triple redundancy, Dedicated crypto hardware",
+        generateReport("Variant C - Triple redundancy, Dedicated crypto hardware",
                 AVComponentFactory.buildRedundancyDedicatedProcessorVariant());
     }
 
-    private static void report(String variantName, EmergencyBrakingSystem system) 
+    private static void generateReport(String variantName, EmergencyBrakingSystem system) 
     {
         ObstacleDetectionFunction odf = system.getDetectionFunction();
         SensorFusionFunction sff = odf.getSensorFusionFunction();

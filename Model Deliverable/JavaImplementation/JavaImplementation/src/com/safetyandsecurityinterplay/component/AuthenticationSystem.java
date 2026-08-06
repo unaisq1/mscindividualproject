@@ -26,7 +26,7 @@ public class AuthenticationSystem implements IAuthenticateData{
         return new AuthenticatedData(raw.getRawValues(), raw.getTimestampInMilliseconds());
     }
 
-    private static final class AuthenticatedData implements IAuthenticatedSensorData 
+    private static final class AuthenticatedData implements IAuthenticatedSensorData //Provides Authenticated Data
     {
         private final double[] values;
         private final long timestamp;

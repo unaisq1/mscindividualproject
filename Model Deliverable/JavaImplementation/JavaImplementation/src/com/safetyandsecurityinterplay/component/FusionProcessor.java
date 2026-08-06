@@ -32,12 +32,12 @@ public class FusionProcessor {
         return cryptoOverhead + processingTimeInMilliseconds;
     }
 
-    public IFuseData fuse(IVotedData voted) 
+    public IFuseData fuse(IVotedData voted) //Used to fuse Voted Data
     {
         return new FusedData(voted.getRepresentativeValues(), voted.hasSufficientValidSources());
     }
 
-    private static final class FusedData implements IFuseData 
+    private static final class FusedData implements IFuseData //Provides Fused Data to be used
     {
         private final double[] fusedPosition;
         private final boolean trustworthy;
