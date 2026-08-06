@@ -60,6 +60,10 @@ Capacity/Usage Unit (systemAvailablity): Percentage (%)</body>
       <ownedComment xmi:type="uml:Comment" xmi:id="_Pcs0EHswEfGVnpeYmAPPiA">
         <body>Values are currently roughly assumed</body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_mofRgJFmEfGoWKpeQLnszQ">
+        <body>Time Unit (processingDeadline/fusionLatency): Milliseconds (ms)&#xD;
+Capacity/Usage Unit (detectionAccuracy): Percentage (%)</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Interaction" xmi:id="_yVSEcGqFEfGmR83NCWlxrA" name="Interaction2"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_1KLnMGtEEfG-5dxW-sG0PQ" name="Obstacle Detection Function">
         <ownedRule xmi:type="uml:Constraint" xmi:id="_u_-mYGtSEfG-5dxW-sG0PQ" name="ODF Constraint 1 (Safety Property)">
@@ -132,7 +136,7 @@ implies self.fusionLatency &lt;= 20</body>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="__JTigm5UEfG-5dxW-sG0PQ" name="obstacle detection function" type="_1KLnMGtEEfG-5dxW-sG0PQ" association="__JQfMG5UEfG-5dxW-sG0PQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Activity" xmi:id="_qOosgG6uEfGHXeUJchcvDQ" name="Activity7" node="_OIG_UG6xEfGHXeUJchcvDQ _oeGJsG6zEfGHXeUJchcvDQ _hRtmEG60EfGHXeUJchcvDQ _n7tuAG62EfGum7WEhupHQg _9B-WEG62EfGum7WEhupHQg _7m97MG63EfGum7WEhupHQg _A5lEUG64EfGum7WEhupHQg _qiM9MG64EfGum7WEhupHQg _1_0QAG64EfGum7WEhupHQg _6ykNUG64EfGum7WEhupHQg _AkOC4G65EfGum7WEhupHQg _4i60AG66EfGum7WEhupHQg _WclycG67EfGum7WEhupHQg">
+      <packagedElement xmi:type="uml:Activity" xmi:id="_qOosgG6uEfGHXeUJchcvDQ" name="AV Activity Diagram Node" node="_OIG_UG6xEfGHXeUJchcvDQ _oeGJsG6zEfGHXeUJchcvDQ _hRtmEG60EfGHXeUJchcvDQ _n7tuAG62EfGum7WEhupHQg _9B-WEG62EfGum7WEhupHQg _7m97MG63EfGum7WEhupHQg _A5lEUG64EfGum7WEhupHQg _qiM9MG64EfGum7WEhupHQg _1_0QAG64EfGum7WEhupHQg _6ykNUG64EfGum7WEhupHQg _AkOC4G65EfGum7WEhupHQg _4i60AG66EfGum7WEhupHQg _WclycG67EfGum7WEhupHQg">
         <edge xmi:type="uml:ControlFlow" xmi:id="_7YkaMG60EfGHXeUJchcvDQ" target="_oeGJsG6zEfGHXeUJchcvDQ" source="_OIG_UG6xEfGHXeUJchcvDQ"/>
         <edge xmi:type="uml:ControlFlow" xmi:id="_2KcdkG62EfGum7WEhupHQg" target="_hRtmEG60EfGHXeUJchcvDQ" source="_oeGJsG6zEfGHXeUJchcvDQ"/>
         <edge xmi:type="uml:ControlFlow" xmi:id="_4n4wYG62EfGum7WEhupHQg" target="_n7tuAG62EfGum7WEhupHQg" source="_hRtmEG60EfGHXeUJchcvDQ"/>
@@ -178,6 +182,10 @@ implies self.fusionLatency &lt;= 20</body>
 &#xD;
 </body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_NOLR8JF0EfGoWKpeQLnszQ">
+        <body>Time Unit (latency/processingTime/cryptoOverhead/processingTime): Milliseconds (ms)&#xD;
+Distance Unit (range): Metres (m)</body>
+      </ownedComment>
       <ownedRule xmi:type="uml:Constraint" xmi:id="_pmzqIHZGEfG_hu9eze5UeQ" name="Sensor Constraint 1 (Security Property)" constrainedElement="_cgDMEHZCEfG_hu9eze5UeQ">
         <specification xmi:type="uml:OpaqueExpression" xmi:id="_pm6X0HZGEfG_hu9eze5UeQ" name="Sensor Constraint 1 (Security Property)">
           <language>OCL</language>
@@ -206,7 +214,7 @@ and self.latency &lt;= 30&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_37lSsIVtEfGa8cDegiFfVw" name="encryptionEnabled">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_ZoPIYIYPEfGzIdxIAce5yg" name="Port6" type="_7RwOAHuNEfGVnpeYmAPPiA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ZoPIYIYPEfGzIdxIAce5yg" name="Port" type="_7RwOAHuNEfGVnpeYmAPPiA" aggregation="composite"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zTTxsIYKEfGzIdxIAce5yg" client="_cgDMEHZCEfG_hu9eze5UeQ" supplier="_7RwOAHuNEfGVnpeYmAPPiA" contract="_7RwOAHuNEfGVnpeYmAPPiA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_L8hS4HZDEfG_hu9eze5UeQ" name="Authentication System">
@@ -219,8 +227,8 @@ and self.latency &lt;= 30&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_baxbYH8cEfGVnpeYmAPPiA" name="keyLength">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_-3-c0IYMEfGzIdxIAce5yg" name="Port5" type="_7RwOAHuNEfGVnpeYmAPPiA" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_UpwKQIYREfGTtd6yczNHGg" name="Port7" type="_DaY2YIJPEfGa8cDegiFfVw" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_-3-c0IYMEfGzIdxIAce5yg" name="Port2" type="_7RwOAHuNEfGVnpeYmAPPiA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_UpwKQIYREfGTtd6yczNHGg" name="Port3" type="_DaY2YIJPEfGa8cDegiFfVw" aggregation="composite"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NJFqoIYQEfGTtd6yczNHGg" client="_L8hS4HZDEfG_hu9eze5UeQ" supplier="_DaY2YIJPEfGa8cDegiFfVw" contract="_DaY2YIJPEfGa8cDegiFfVw"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_4Q00kIYKEfGzIdxIAce5yg" client="_L8hS4HZDEfG_hu9eze5UeQ" supplier="_7RwOAHuNEfGVnpeYmAPPiA"/>
       </packagedElement>
@@ -233,7 +241,7 @@ and self.latency &lt;= 30&#xD;
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_QT91wIYREfGTtd6yczNHGg" name="Port4" type="_DaY2YIJPEfGa8cDegiFfVw" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_y20ecIYUEfGTtd6yczNHGg" name="Port6" type="_Kwp5UIJPEfGa8cDegiFfVw" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_y20ecIYUEfGTtd6yczNHGg" name="Port5" type="_Kwp5UIJPEfGa8cDegiFfVw" aggregation="composite"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vSKE4IYUEfGTtd6yczNHGg" client="_SCymMHZGEfG_hu9eze5UeQ" supplier="_Kwp5UIJPEfGa8cDegiFfVw" contract="_Kwp5UIJPEfGa8cDegiFfVw"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_TShuEIYQEfGTtd6yczNHGg" client="_SCymMHZGEfG_hu9eze5UeQ" supplier="_DaY2YIJPEfGa8cDegiFfVw"/>
       </packagedElement>
